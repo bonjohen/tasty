@@ -8,12 +8,11 @@ A literary dark fantasy novel. 48 chapters across 23 sections. You are writing t
 
 ## Current State
 
-- **Chapters written:** 1–39 (ch01.md through ch39.md)
-- **Total words:** ~105,000
-- **Sections complete:** 1–18
-- **Next section to write:** Section 19 — Captain Vark Falls (Ch 40–41)
-- **Next section outline:** `docs/section_19_outline.md`
-- **Act structure:** Act I complete (Ch 1–16), Act II complete (Ch 17–33), Act III in progress (Ch 34–39). Final stretch: Sections 19–23 (Ch 40–48).
+- **Chapters written:** 1–48 (ch01.md through ch48.md) — ALL CHAPTERS COMPLETE
+- **Total words:** ~127,630
+- **Sections complete:** 1–23 (ALL SECTIONS COMPLETE)
+- **Act structure:** Act I complete (Ch 1–16), Act II complete (Ch 17–33), Act III complete (Ch 34–48).
+- **Novel status:** FIRST DRAFT COMPLETE.
 
 ## Required Reading Before Writing
 
