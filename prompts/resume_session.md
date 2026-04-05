@@ -8,12 +8,12 @@ A literary dark fantasy novel. 48 chapters across 23 sections. You are writing t
 
 ## Current State
 
-- **Chapters written:** 1–33 (ch01.md through ch33.md)
-- **Total words:** ~85,500
-- **Sections complete:** 1–15
-- **Next section to write:** Section 16 — Capture and Delivery (Ch 34–35)
-- **Next section outline:** `docs/section_16_outline.md`
-- **Act structure:** Act I complete (Ch 1–16), Act II nearly complete (Ch 17–33), entering Act III transition
+- **Chapters written:** 1–39 (ch01.md through ch39.md)
+- **Total words:** ~105,000
+- **Sections complete:** 1–18
+- **Next section to write:** Section 19 — Captain Vark Falls (Ch 40–41)
+- **Next section outline:** `docs/section_19_outline.md`
+- **Act structure:** Act I complete (Ch 1–16), Act II complete (Ch 17–33), Act III in progress (Ch 34–39). Final stretch: Sections 19–23 (Ch 40–48).
 
 ## Required Reading Before Writing
 
@@ -32,8 +32,7 @@ Read these files in this order before drafting any chapter:
 - **POV:** Third person past tense. Hurkuzak primary, Vark secondary (intercut). Shifts marked by chapter.
 - **Prose register:** Literary dark (McCarthy/Morrison density). Every sentence earns its place.
 - **The Bleed:** Hakiia's inner voice enters Hurkuzak's narration UNMARKED — no italics, no quotes, no formatting. The boundary between Hurkuzak's thoughts and Hakiia's dissolves.
-- **Bleed progression:** Early (Ch 15–16) = terse corrections, survival instinct. Middle (Ch 17–25) = specific idioms, emotional reactions, memories from Hakiia's perspective, shapes combat action under pressure. Late (Ch 26+) = fully conversational, two selves sharing one body.
-- **Current Bleed stage:** Late transition. Voice now contributes structural knowledge as certainties (not just tactical corrections). Changed tone since the wreck discovery — less combative, more careful. Two presences aware of each other as separate entities, aligned in direction (first shared wanting). Not yet fully conversational (full sentences directed at Hurkuzak), but crossing that threshold.
+- **Current Bleed stage:** INTEGRATED (as of Ch 39). The voice is no longer a second voice — it is part of how Hurkuzak thinks. Hakiia's instincts, violence, memory, and emotional patterns are Hurkuzak's own tools, wielded by Hurkuzak's moral judgment. The boundary dissolved through acceptance, not erasure. Prose should mark this: sentences that could belong to either, instincts carrying both signatures, no more distinction between "the voice" and Hurkuzak's thoughts.
 - **Restrained horror:** Psychological and moral weight over gore. Show behavior, not summarize emotion.
 - **"Demon meat is very tasty":** Already placed (Ch 14). Do not repeat.
 - **Pre-industrial setting:** Sleds, bladed weapons, bows, wagons. No engines, firearms, or electricity.
@@ -42,31 +41,35 @@ Read these files in this order before drafting any chapter:
 
 ## What Just Happened in the Story
 
-**Ch 28–29 (Section 13: Return to the Wreck):** Hurkuzak stumbled onto the cliff site in spring. Body recognized the terrain before his mind did. Descended into the ravine. Searched the wreck and found Hakiia's hidden cache — sealed compartments containing ritual materials, sibling consumption diagrams, and correspondence referencing a "vessel." Evidence of premeditated intent. Comprehension lagging behind evidence.
+**Ch 34 (Section 16: Capture):** Vark POV. Weeks of shaping the ground — herding Hurkuzak toward a walled trading compound using misinformation, positioned men, and the prince's network intermediary (Saaren). Sedation compounds, chemical restraint cord. Professional trap architecture. Waiting for subject.
 
-**Ch 30–31 (Section 14: The Terrible Realization):** The evidence lands in three layers. (1) The mechanism — sibling consumption transfers identity, grief improves yield. (2) Hakiia's prior knowledge — materials prepared for this trip. (3) Hurkuzak was the "vessel" — meant to die. The mercy killing retroactively destabilized (consent as variable). Voice went silent (Ch 30), returned as ambiguous pressure (Ch 31). Every earlier memory permanently unstable. Reconciliation destroyed. Hurkuzak holds both truths (love AND betrayal) without resolution.
+**Ch 35 (Section 16: Capture):** Hurkuzak enters the compound. Gate closes. Three men with sedation vials. Voice screams recognition of the drive pattern. Hakiia takes over combat — damages captors but the trap was designed for this level of violence. Vark shoots from the wall (bolt through right shoulder). Sedated, restrained. THE BLEED CROSSES INTO DIRECT SPEECH: Hakiia says "Hold on" — first true words, direct address. Hurkuzak loses consciousness. Entering the supply chain.
 
-**Ch 32–33 (Section 15: Link to the True Villain):** Correspondence reveals the "merchant prince" as a system-builder funding sibling-ritual experiments for years. Hakiia was recruited, the cabin assigned, prior attempts mostly failed. Hurkuzak is the accidental success — mercy/love/consent produced what dominance could not. Voice crosses threshold — contributes Hakiia's knowledge as structural certainties. Three unbearable truths coexist. Hurkuzak shifts from flight to approach. First shared wanting between the two presences.
+**Ch 36–37 (Section 17: The Ritual Stronghold):** Hurkuzak wakes in Tessivane's stronghold. Moved through the operation: processing room, storage, kitchen, treatment rooms. Institutional horror — functioning, normalized. Orath Tessivane enters and names himself. Philosophy through conversation: 42 trials over 23 years, love as the missing variable. Wants to extract the biochemistry. Hakiia's first internal apology: "I sat where you are sitting. He said the same things. I believed him."
 
-**Ch 27 (most recent Vark, Section 12):** Vark tracking Hurkuzak east. Plans capture logistics — needs buyer's infrastructure. Message sent to Koss. Following at professional distance.
+**Ch 38–39 (Section 18: The Final Inner Conflict — THEMATIC CLIMAX):** Tessivane returns, pushes the interpretation that Hakiia won — stronger personality wearing weaker body. Hakiia reacts with revulsion, rejects the domination model. Night-long interior argument. Key memory: 12-year-old Hakiia watching 4-year-old Hurkuzak sleep, terrified of losing him. Fear is the root of all cruelty — love curdled into a philosophy of strength. Integration: Hurkuzak accepts Hakiia as part of himself but claims moral authorship. Third being settles. Fear of self gone. Ready to break the machine.
 
 ## Where the Story Goes Next
 
-**Section 16 (Ch 34–35): Capture and Delivery.** Vark drives Hurkuzak into the merchant prince's hands. Dramatic irony: Hurkuzak thinks he is approaching the prince, but Vark has been channeling him. A Vark POV chapter (Ch 34) and a Hurkuzak POV chapter (Ch 35). The separate forces converge.
+**Section 19 (Ch 40–41): Captain Vark Falls.** The hunter-prey dynamic inverts. Vark's final POV chapter — she realizes the stronghold is going wrong. Hurkuzak confronts her as an integrated being. Her defeat must feel personal, physical, and frightening — not triumphant. She is the last representative of ordinary demon harvesting.
 
-**Section 17 (Ch 36–37): The Ritual Stronghold.** Hurkuzak is brought to the merchant prince's fortress — part slaughterhouse, part banquet hall, part laboratory, part shrine. Elite consumption culture made physical. Hurkuzak is not brought to die but to be understood, broken down, and replicated.
+**Section 20 (Ch 42–43): Hurkuzak vs. the Merchant Prince.** Physical and conceptual confrontation. Tessivane must be defeated not just physically but philosophically. Hurkuzak destroys the operation — burns records, shatters storage, frees captives, collapses infrastructure. Breaks both the man and the thesis.
 
-**Section 18 (Ch 38–39): The Final Inner Conflict.** Integration vs. domination vs. denial. Hurkuzak must resolve the inner question before he can win outwardly. Becomes a third being — neither Hakiia reborn nor the old Hurkuzak, but inheritance plus choice.
+**Section 21 (Ch 44–45): Revelation of the Ancient Purpose.** The sibling-consumption rite was originally a preservation mechanism used in extremis — not luxury. Dangerous because of identity erosion and composite instability. The taboo survived because the rite was real and too dangerous to permit. Reframes both Hakiia and Hurkuzak.
+
+**Section 22 (Ch 46–47): Final Understanding of Hakiia.** Not innocence, not absolution — understanding. Hurkuzak can grieve truthfully. Can hate what Hakiia intended and still love the brother who tried to prepare him. More painful than forgiveness, more honest than revenge.
+
+**Section 23 (Ch 48): Sequel Hook.** Someone consumes a fragment of Hurkuzak during the stronghold destruction. Last scene shifts away — another person hears two voices, not one. The chain continues. Inheritance is already more layered.
 
 ## Character State Quick Reference
 
-**Hurkuzak:** Transformed. Enhanced strength, senses, healing. All injuries healed. Carrying Hakiia's voice inside him. Has discovered the full betrayal — Hakiia planned to kill him, was recruited by the merchant prince. Holds love and betrayal simultaneously without resolution. Now moving east with purpose: approaching the patron, not fleeing. First advantage in the story — the patron doesn't know what's coming.
+**Hurkuzak:** INTEGRATED. Third being — composite of inheritance and choice. Enhanced strength, senses, healing, combat capability. All Hakiia's tools wielded by Hurkuzak's judgment. Fear of self gone. Currently restrained in Tessivane's stronghold, but internally settled and dangerous. Knows the stronghold layout (processing, storage, kitchen, treatment, study). Injuries: bolt wound in right shoulder (closing fast), forearm cut (healed). About to break free.
 
-**Hakiia (the Bleed):** Dead but present. Voice has crossed a threshold — contributes structural knowledge (patron's experimental history, Hakiia's motivations) as certainties, not just tactical corrections. Changed tone since exposure — less combative, more careful. Aligned with Hurkuzak's direction (first shared wanting). Two presences increasingly aware of each other as separate entities. Transitioning to late Bleed stage.
+**Hakiia (the Bleed):** No longer a separate "voice." Integrated into Hurkuzak's composite self. His instincts, memories, violence, and emotional patterns are now experienced as Hurkuzak's own. The boundary dissolved through acceptance. Key moments: admitted Hurkuzak's love saved him from dissolution; provided the childhood memory that broke the argument open; rejected the domination model Tessivane articulated.
 
-**Vark:** Tracking Hurkuzak east at professional distance. Has blood sample, healing data, witness accounts. Confirmed sibling consumption. Decided on live capture for sale to premium buyer. Message sent to Koss. Planning to use the prince's infrastructure for capture. Professional, patient, dangerous. Does not know his name.
+**Vark:** Inside the stronghold. Has delivered Hurkuzak. Awaiting payment or observing the operation. Professional, satisfied. Does not yet realize what Hurkuzak has become. Her last POV chapter was Ch 34. Her final confrontation with Hurkuzak comes in Section 19.
 
-**Orath Tessivane:** Identified by title ("the merchant prince") through correspondence (Ch 32). System-builder who has funded sibling-ritual experiments for years. Prior attempts mostly failed. Not yet named or physically introduced. Hurkuzak knows the title, the experimental history, and the supply chain direction (east).
+**Orath Tessivane:** Physically present in the stronghold. Middle-aged, refined, courteous, scholarly. Eats demon flesh daily. Has articulated his philosophy (self is material, identity is substrate, biochemistry over emotion). Excited by the dual response. Does not realize the integration has completed or that both selves are aligned against him. Vulnerable: sees the dual nature as his greatest finding, not as a weapon.
 
 ## Section Outline Files
 
