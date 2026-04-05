@@ -5,10 +5,10 @@
    Their sled when off a cliff ten kilometers from a remote cabin, destroying it, scattering supplies, injuring both brothers, and leaving Hakiia with two broken legs.
 
 3. The wolves
-   As they struggle through the snow toward shelter, wolves attack. The brothers survive, but the fight leaves Hurkuzak badly battered and Hakiia critically wounded beyond hope of recovery.
+   As they struggle through the snow toward shelter, wolves attack. The brothers survive, but the fight costs Hakiia his right hand (destroyed by the dying wolf's jaw convulsion, cauterized to stop the bleeding) and completes the nerve damage in his left arm (shoulder injury from the cliff, worsened by the exertion). Hurkuzak is badly battered. Hakiia is critically wounded beyond hope of recovery, with no functional hands or arms.
 
 4. The mercy killing
-   Knowing he faces a slow death from cold, pain, and infection, Hakiia demands a mercy killing. Hurkuzak resists, then grants it, creating the central wound of the story.
+   Knowing he faces a slow death from cold, pain, and infection — and physically unable to end his own life with no functional hands — Hakiia demands a mercy killing, invoking the cultural right to death ("the draught," the family-administered death their people recognize as an act of love). Hurkuzak resists, then grants it, creating the central wound of the story.
 
 5. The march to the cabin
    Hurkuzak carries Hakiia's body through the snow to the cabin, collapses beside it, and falls unconscious from exhaustion, injury, and grief.

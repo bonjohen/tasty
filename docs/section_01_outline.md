@@ -67,4 +67,5 @@
 * Hakiia should not read as a villain in these chapters. He should read as a difficult person who loves badly.
 * In all three chapters, plant the idea that Hakiia believes survival belongs to the hard, while Hurkuzak still carries forms of strength Hakiia does not recognize. That contrast will matter later.
 * Do not hint too strongly yet that Hakiia planned the trip for ritual purposes. At this stage, the emotional truth should remain centered on brotherhood, imbalance, and misdirected care.
+* **Cultural death practice (Ch 3):** During the father's death conversation, Hakiia should reference "the draught" — the family-administered death their culture recognizes when a person becomes a burden. Their father should have asked. He didn't. The proverb "Never live so long that you become a burden" should be seeded here as shared cultural knowledge. Keep it organic — Hakiia abbreviates, assumes Hurkuzak knows. Don't explain fully; let Ch 8 complete the picture. Hurkuzak should flinch internally, establishing his resistance to the practice that will be invoked against him later.
 
