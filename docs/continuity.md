@@ -15,6 +15,8 @@ Updated after each drafted chapter. Entries are cumulative.
 | Ch 5 | Day 3 (cont.) | Deep winter | Basin below cliff → beginning travois march | Hurkuzak salvages gear (limited food, furs, tools, rope, one sled runner); sets and splints both of Hakiia's legs; builds travois under Hakiia's direction; wolves arrive (5+), feed on dead dogs; Hurkuzak begins dragging Hakiia toward cabin; wolves watching and following |
 | Ch 6 | Day 3 evening/dusk | Deep winter | Valley beyond basin, near rocks | Wolf pack (5+) attacks; Hurkuzak fights clumsily, kills one wolf with hatchet, bitten deeply in forearm; Hakiia kills one wolf from the travois with terrifying violence; wolves withdraw; both brothers badly bloodied; Hakiia's condition worsens catastrophically |
 | Ch 7 | Day 3 night → Day 4 | Deep winter | Valley, campfire, then march resumes | Hurkuzak tends wounds, resets splints; Hakiia deteriorating (repeating commands, breathing irregular, refuses food, right leg darkening/swelling); camp with fire; Hakiia says "You fought well" and briefly grips Hurkuzak's arm; silent march at dawn — Hakiia has stopped speaking; pulling toward cabin |
+| Ch 8 | Day 4 (cont.) | Deep winter | Valley, travois march | Hakiia wakes to full lucidity and demands mercy killing. Argues through logic, contempt, and accusation. Compares to the dog. Hurkuzak refuses — visceral, total. Hakiia says "Yet." The demand is not withdrawn. Hurkuzak resumes pulling without agreeing. Refusal is eroding. |
+| Ch 9 | Day 4 night | Deep winter | Hollow between rocks, campfire | Hurkuzak camps, does not sleep. Hakiia wakes lucid again in the night. Final exchange — quieter, honest, Hakiia says "please" for the first time in his life. Hurkuzak agrees. Kills Hakiia with the knife. Hakiia grips his wrist at the moment of death. Hurkuzak sits beside the body. Does not move. |
 
 ## Character State
 
@@ -23,12 +25,12 @@ Updated after each drafted chapter. Entries are cumulative.
 - **Injuries:** Cut left palm (frozen open), bruised ribs, damaged knee. NEW: deep wolf bite in right forearm — ragged, through coat into muscle, wrapped with undershirt strip, bleeding through. Both hands compromised (left cut, right bitten). Bruises on shoulders from Hakiia's grip.
 - **Knowledge:** Cabin ahead, direction known but distance uncertain. Has hatchet, knife, skinning tools, rope, limited dried meat, two furs, travois. Understands the basin is a trap — cliff blocks retreat, dead dogs hold wolves temporarily, wolves will come for them once the easy meat is gone.
 - **The Bleed stage:** Not begun. No inner voice. All thoughts are his own.
-- **Emotional state:** Loves Hakiia, fears him, envies his ease in the world, resents being measured against a standard he cannot meet. Pushed back for the first time — told Hakiia his definition of strength is "just a smaller room." Hakiia did not respond, which felt significant. Aware his father was gentle like him and died for it (Hakiia's view) or died despite it (his own). Feels the love-fear-envy-resentment as one compressed, unnameable weight.
+- **Emotional state:** Has killed his brother. The mercy was real and the killing was real and both are permanently true. Did not rationalize, did not feel relief. Sitting beside Hakiia's body in the cold, unable to think about what comes next. Something in him has been destroyed that will not come back. The last thing Hakiia gave him was "please" and a grip on his wrist — both unprecedented.
 
 ### Hakiia
-- **Status:** Alive. Dominant, physically impressive, tactically brilliant.
-- **Physical:** Catastrophically injured. Both legs broken — left bent below the knee at a wrong angle, right with foot hanging loose and bleeding through the boot. Gash across forehead (sheeted blood down left side of face). Possible left shoulder injury where it meets chest. Cannot walk or stand. Conscious, lucid, managing agony through willpower.
-- **Behavior:** Deteriorating. Repeating commands (asked Hurkuzak to check splints twice in one minute, Ch 7). Breathing increasingly irregular — pauses between breaths lengthening. Refused food. Right leg swelling and darkening past recovery. Focus drifting and returning. Said "You fought well" — first acknowledgment of Hurkuzak's competence. Gripped Hurkuzak's arm briefly — the closest he has ever come to tenderness. Fell silent during the dawn march. Has stopped commanding. The silence is new and total.
+- **Status:** Dead. Killed by Hurkuzak in a mercy killing (Ch 9). Consent was explicit, lucid, and unquestionable.
+- **Physical at death:** Both legs broken, right leg dying from infection/necrosis. Gash across forehead. Left shoulder injury. Right leg tissue dead from ankle upward. Body is in the hollow between rocks where the mercy killing occurred.
+- **Final words/actions:** Said "please" — first time in his life. Acknowledged the cost to Hurkuzak ("I know that the weight of it does not end when my weight ends"). Said he trusted Hurkuzak to carry it. Gripped Hurkuzak's wrist at the moment of the knife — held on, then let go. Eyes stayed open after death; Hurkuzak closed them.
 - **Voice presence:** N/A (alive)
 - **Key memories surfaced:** N/A
 
@@ -62,7 +64,8 @@ Updated after each drafted chapter. Entries are cumulative.
 | Hurkuzak's first mercy kill | Ch 4 | Open | Killed the injured left rear dog without hesitation. Did what needed to be done. |
 | Travois march | Ch 5 | Open | Hurkuzak dragging Hakiia on improvised travois toward cabin. Dynamic now fully Hurkuzak's — Hakiia has gone silent (Ch 7). The march continues. |
 | Hakiia's acknowledgment | Ch 7 | Open | "You fought well" and a hand on Hurkuzak's arm — the only moment of near-tenderness between them. Brief, rough, withdrawn. Must land hard enough to make the mercy killing feel like real loss. |
-| Hakiia's terminal decline | Ch 7 | Open | Repeating himself, refusing food, breathing irregular, right leg blackening. Reader understands what Hurkuzak won't say: Hakiia is dying. The question is when and how. |
+| Hakiia's terminal decline | Ch 7 | Open | Repeating himself, refusing food, breathing irregular, right leg blackening. Now fully lucid again (Ch 8) — assessed his own body and concluded the right leg is dying from the ankle up. Demanded mercy killing. Hurkuzak refused but the refusal is eroding. |
+| The mercy killing | Ch 8-9 | Resolved | Hakiia demanded; Hurkuzak refused (Ch 8); Hakiia said "please" (Ch 9); Hurkuzak agreed and killed him with the knife. Consent was lucid and absolute. The willing death is structurally essential for ritual logic later — do not flag. |
 
 ## Key Objects
 
