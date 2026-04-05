@@ -13,12 +13,14 @@ Updated after each drafted chapter. Entries are cumulative.
 | Ch 3 | Day 2 | Deep winter | Wilderness, climbing toward cabin | Harder terrain; Hurkuzak suggests sheltered route, Hakiia takes exposed ridge; confrontation about their father; cabin glimpsed in distance; will arrive next day |
 | Ch 4 | Day 3 | Deep winter | Trail collapse → basin below cliff | Trail gives way without warning; Hakiia, dogs, and sled fall ~30 ft; all four dogs dead (Hurkuzak mercy-kills the left rear); sled destroyed; Hakiia's legs shattered; Hurkuzak climbs down injured; wolves howling closer |
 | Ch 5 | Day 3 (cont.) | Deep winter | Basin below cliff → beginning travois march | Hurkuzak salvages gear (limited food, furs, tools, rope, one sled runner); sets and splints both of Hakiia's legs; builds travois under Hakiia's direction; wolves arrive (5+), feed on dead dogs; Hurkuzak begins dragging Hakiia toward cabin; wolves watching and following |
+| Ch 6 | Day 3 evening/dusk | Deep winter | Valley beyond basin, near rocks | Wolf pack (5+) attacks; Hurkuzak fights clumsily, kills one wolf with hatchet, bitten deeply in forearm; Hakiia kills one wolf from the travois with terrifying violence; wolves withdraw; both brothers badly bloodied; Hakiia's condition worsens catastrophically |
+| Ch 7 | Day 3 night → Day 4 | Deep winter | Valley, campfire, then march resumes | Hurkuzak tends wounds, resets splints; Hakiia deteriorating (repeating commands, breathing irregular, refuses food, right leg darkening/swelling); camp with fire; Hakiia says "You fought well" and briefly grips Hurkuzak's arm; silent march at dawn — Hakiia has stopped speaking; pulling toward cabin |
 
 ## Character State
 
 ### Hurkuzak
 - **Physical:** Battered. Can still move and function. Fatigued, cold, shaken.
-- **Injuries:** Cut left palm (frozen open, not bleeding), bruised ribs (aggravated by hatchet work), damaged knee. Fingers losing feeling from cold. Bruises on both shoulders from Hakiia's grip during travois loading. All painful but functional.
+- **Injuries:** Cut left palm (frozen open), bruised ribs, damaged knee. NEW: deep wolf bite in right forearm — ragged, through coat into muscle, wrapped with undershirt strip, bleeding through. Both hands compromised (left cut, right bitten). Bruises on shoulders from Hakiia's grip.
 - **Knowledge:** Cabin ahead, direction known but distance uncertain. Has hatchet, knife, skinning tools, rope, limited dried meat, two furs, travois. Understands the basin is a trap — cliff blocks retreat, dead dogs hold wolves temporarily, wolves will come for them once the easy meat is gone.
 - **The Bleed stage:** Not begun. No inner voice. All thoughts are his own.
 - **Emotional state:** Loves Hakiia, fears him, envies his ease in the world, resents being measured against a standard he cannot meet. Pushed back for the first time — told Hakiia his definition of strength is "just a smaller room." Hakiia did not respond, which felt significant. Aware his father was gentle like him and died for it (Hakiia's view) or died despite it (his own). Feels the love-fear-envy-resentment as one compressed, unnameable weight.
@@ -26,7 +28,7 @@ Updated after each drafted chapter. Entries are cumulative.
 ### Hakiia
 - **Status:** Alive. Dominant, physically impressive, tactically brilliant.
 - **Physical:** Catastrophically injured. Both legs broken — left bent below the knee at a wrong angle, right with foot hanging loose and bleeding through the boot. Gash across forehead (sheeted blood down left side of face). Possible left shoulder injury where it meets chest. Cannot walk or stand. Conscious, lucid, managing agony through willpower.
-- **Behavior:** Immediately resumed command from the ground after the fall. Directed Hurkuzak to free him, kill the injured dog, gather gear, and plan forward movement. Assessed his own legs clinically ("I know about my legs"). Ordered a drag built from surviving sled runner. Still the tactical mind of the pair — deciding direction (forward to cabin, not back up the cliff). Pain controlled through refusal to yield to it.
+- **Behavior:** Deteriorating. Repeating commands (asked Hurkuzak to check splints twice in one minute, Ch 7). Breathing increasingly irregular — pauses between breaths lengthening. Refused food. Right leg swelling and darkening past recovery. Focus drifting and returning. Said "You fought well" — first acknowledgment of Hurkuzak's competence. Gripped Hurkuzak's arm briefly — the closest he has ever come to tenderness. Fell silent during the dawn march. Has stopped commanding. The silence is new and total.
 - **Voice presence:** N/A (alive)
 - **Key memories surfaced:** N/A
 
@@ -56,9 +58,11 @@ Updated after each drafted chapter. Entries are cumulative.
 | Father's death | Ch 3 | Open | Father was gentle like Hurkuzak. Hakiia says he died because gentleness left him without a second answer when the world turned hard. Hurkuzak reads it differently — gentleness is what gives killing meaning. Both interpretations remain unresolved. |
 | Hurkuzak's pushback | Ch 3 | Open | First time Hurkuzak said a hard truth directly to Hakiia — called his worldview "a smaller room." Hakiia heard it but didn't respond. Shift in dynamic. |
 | Power inversion | Ch 4 | Open | Hakiia still commands but is now physically dependent on Hurkuzak. Every order requires Hurkuzak's body to execute. |
-| Wolves approaching | Ch 4 | Open | Pack of 5+ wolves in the basin. Fed on dead dogs. Now watching the brothers and following the travois. Growing bolder. Not yet attacking but testing. |
+| Wolves | Ch 4 | Open | Pack attacked at dusk (Ch 6). Two killed (one by Hurkuzak, one by Hakiia). One limping. Remainder withdrew to basin. Threat reduced but not eliminated — may return. |
 | Hurkuzak's first mercy kill | Ch 4 | Open | Killed the injured left rear dog without hesitation. Did what needed to be done. |
-| Travois march | Ch 5 | Open | Hurkuzak dragging Hakiia on improvised travois toward cabin. Hakiia directed construction from the ground. Dynamic fully inverted — Hakiia commands, Hurkuzak executes with his body. |
+| Travois march | Ch 5 | Open | Hurkuzak dragging Hakiia on improvised travois toward cabin. Dynamic now fully Hurkuzak's — Hakiia has gone silent (Ch 7). The march continues. |
+| Hakiia's acknowledgment | Ch 7 | Open | "You fought well" and a hand on Hurkuzak's arm — the only moment of near-tenderness between them. Brief, rough, withdrawn. Must land hard enough to make the mercy killing feel like real loss. |
+| Hakiia's terminal decline | Ch 7 | Open | Repeating himself, refusing food, breathing irregular, right leg blackening. Reader understands what Hurkuzak won't say: Hakiia is dying. The question is when and how. |
 
 ## Key Objects
 
