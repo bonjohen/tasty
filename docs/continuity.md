@@ -17,6 +17,8 @@ Updated after each drafted chapter. Entries are cumulative.
 | Ch 7 | Day 3 night → Day 4 | Deep winter | Valley, campfire, then march resumes | Hurkuzak tends wounds, resets splints; Hakiia deteriorating (repeating commands, breathing irregular, refuses food, right leg darkening/swelling); camp with fire; Hakiia says "You fought well" and briefly grips Hurkuzak's arm; silent march at dawn — Hakiia has stopped speaking; pulling toward cabin |
 | Ch 8 | Day 4 (cont.) | Deep winter | Valley, travois march | Hakiia wakes to full lucidity and demands mercy killing. Argues through logic, contempt, and accusation. Compares to the dog. Hurkuzak refuses — visceral, total. Hakiia says "Yet." The demand is not withdrawn. Hurkuzak resumes pulling without agreeing. Refusal is eroding. |
 | Ch 9 | Day 4 night | Deep winter | Hollow between rocks, campfire | Hurkuzak camps, does not sleep. Hakiia wakes lucid again in the night. Final exchange — quieter, honest, Hakiia says "please" for the first time in his life. Hurkuzak agrees. Kills Hakiia with the knife. Hakiia grips his wrist at the moment of death. Hurkuzak sits beside the body. Does not move. |
+| Ch 10 | Day 5 | Deep winter | Valley, carrying Hakiia's body toward cabin | Hurkuzak repairs travois, begins carrying the body. Body changes categories — from brother to weight. Hallucinations from exhaustion (Hakiia's voice, false cabin sighting, phantom warmth, phantom hand on shoulder). Speaks aloud to Hakiia's absence. Still pulling at chapter's end. No longer apologizing when he adjusts the body. |
+| Ch 11 | Day 5 (cont.) → Day 6? | Deep winter | Valley → cabin arrival | Falls repeatedly, each recovery harder. Considers leaving the body — rejects it. Finds the cabin (stone walls, timber roof, single room, stone hearth, sleeping platform, back door, no supplies). Drags Hakiia's body inside. Collapses on the stone floor beside his brother. Loses consciousness. |
 
 ## Character State
 
@@ -25,7 +27,7 @@ Updated after each drafted chapter. Entries are cumulative.
 - **Injuries:** Cut left palm (frozen open), bruised ribs, damaged knee. NEW: deep wolf bite in right forearm — ragged, through coat into muscle, wrapped with undershirt strip, bleeding through. Both hands compromised (left cut, right bitten). Bruises on shoulders from Hakiia's grip.
 - **Knowledge:** Cabin ahead, direction known but distance uncertain. Has hatchet, knife, skinning tools, rope, limited dried meat, two furs, travois. Understands the basin is a trap — cliff blocks retreat, dead dogs hold wolves temporarily, wolves will come for them once the easy meat is gone.
 - **The Bleed stage:** Not begun. No inner voice. All thoughts are his own.
-- **Emotional state:** Has killed his brother. The mercy was real and the killing was real and both are permanently true. Did not rationalize, did not feel relief. Sitting beside Hakiia's body in the cold, unable to think about what comes next. Something in him has been destroyed that will not come back. The last thing Hakiia gave him was "please" and a grip on his wrist — both unprecedented.
+- **Emotional state:** Has killed his brother and carried his body to the cabin. The mercy and the killing are both permanently true. During the march, Hakiia's body changed categories — from brother to weight to burden. Considered leaving the body; could not. Spoke aloud to Hakiia's absence ("You were right about the leg. You were wrong about the rest."). Collapsed on the cabin floor beside the body. Unconscious. Something in him destroyed. The next story begins when he wakes.
 
 ### Hakiia
 - **Status:** Dead. Killed by Hurkuzak in a mercy killing (Ch 9). Consent was explicit, lucid, and unquestionable.
@@ -50,7 +52,7 @@ Updated after each drafted chapter. Entries are cumulative.
 
 | Thread | Introduced (Ch) | Status | Notes |
 |--------|-----------------|--------|-------|
-| Journey to remote cabin | Ch 1 | Open | Cabin still ahead, now below them in the valley. A day or more of travel. Transport destroyed — must drag Hakiia. |
+| Journey to remote cabin | Ch 1 | Resolved (Ch 11) | Arrived. Single room, stone walls, timber roof, stone hearth, sleeping platform, one shelf, rough table, back door (latched inside). No food, no fuel, no supplies. Shelter only — not rescue. |
 | Hakiia's hidden motive for the trip | Ch 1 | Open | No hints planted yet; trip reads as hunting/hardening expedition |
 | Hurkuzak's unrecognized strengths | Ch 1 | Open | Notices the dog's cracked pad, the elk's eye, how knots hold — things Hakiia misses |
 | The correction pattern | Ch 1 | Open | Lifelong dynamic of Hakiia correcting, Hurkuzak failing to meet the standard |
@@ -84,7 +86,7 @@ Updated after each drafted chapter. Entries are cumulative.
 |----------|-------------------|-------------|----------------|
 | Wilderness trail | Ch 1 | Packed snow, thinning trees, climbing terrain. Near land Hurkuzak's mother's people held. | Trail collapsed at cliff edge (Ch 4); route back up is impassable with a wounded man |
 | Basin below cliff | Ch 4 | Snow-covered basin at base of 30-ft drop. Debris field of rock, snow, sled wreckage, dead dogs. | Current location. Wolves approaching. |
-| Remote cabin | Referenced Ch 1 | Not yet described | Destination, not yet reached |
+| Remote cabin | Referenced Ch 1, arrived Ch 11 | Single room. Stone walls (1 ft thick at base). Timber roof (sagging under snow). Stone hearth (empty). Raised sleeping platform (bare). One shelf (empty). Small rough table. Front door (wood, dark with age). One shuttered window. Small back door (latched from inside — storage or exit). Stone floor with gaps. Clearing at base of granite face, sheltered from wind. Near tree line. | Hurkuzak and Hakiia's body inside. Hurkuzak unconscious on the floor. Door open. No fire. |
 | Cassavon | Ch 2 | Trade town; tanner's yard with rented stone workspace; streets near garrison | Vark's base of operations |
 
 ## Animals
