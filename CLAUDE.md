@@ -56,13 +56,50 @@ The system-builder behind the flesh trade. Exploitation refined into theory and 
 
 ## Chapter Production Workflow
 
-1. For each analysis section (1–23): outline 2–3 chapters with titles, POV, and beat summary
-2. User reviews the section outline
-3. Draft chapters at 2,000–3,500 words each
-4. Update `docs/continuity.md` after each drafted chapter
-5. File naming: `chapters/ch01.md`, `ch02.md`, etc. (flat, sequential across the whole book)
-6. Chapter format: `# Chapter N: Title` followed by prose
-7. Titled chapters (e.g., "Chapter 3: What the Snow Kept")
+The primary workflow uses the CLI orchestration system (skills + agents):
+
+- **`/write-section [N]`** — Main orchestrator. Loads context via parallel agents, drafts all chapters in a section, updates continuity, runs quality checks, commits.
+- **`/resume`** — Session bootstrap. Derives project state from the filesystem. Run at session start.
+- **`/check-continuity [N or range]`** — Validates chapters against `docs/continuity.md`.
+- **`/chapter-status`** — Dashboard showing all sections, chapters, word counts, completion.
+
+The orchestrator uses five specialized agents (in `.claude/agents/`): `context-loader`, `outline-reader`, `rhythm-reader`, `quality-checker`, `continuity-updater`. These run in parallel where possible to minimize context usage and maximize throughput.
+
+Section-to-chapter mapping is in `docs/section_map.md`.
+
+### File Conventions
+1. Section outlines: `docs/section_NN_outline.md` (one per section, 2–3 chapters each)
+2. Chapter files: `chapters/ch01.md`, `ch02.md`, etc. (flat, sequential across the whole book)
+3. Chapter format: `# Chapter N: Title` followed by prose
+4. Word targets: 2,000–3,500 words per chapter (specified per chapter in section outlines)
+5. Continuity: `docs/continuity.md` updated after every chapter
+
+### Legacy Workflow
+The original manual process is preserved in `prompts/chapter_prompt.md`, `prompts/resume_session.md`, and `prompts/story_outline_prompt.md` for reference. These work independently of the CLI system if needed.
+
+## Story Development Workflow
+
+The pre-drafting development process uses a separate set of skills and agents:
+
+- **`/generate-beats`** — Creates or revises the beat backbone (`docs/15_beats.md`) from the story concept
+- **`/stabilize-beats`** — Runs the Beat Expansion decision pass; assesses whether beats are ready for section expansion
+- **`/expand-sections [range]`** — Generates section outline files from stabilized beats; enforces the beat stability gate
+- **`/story-status`** — Dashboard for the development phase (concept, beats, sections, characters, open questions)
+- **`/check-structure [draft-ready]`** — Validates consistency across all structural files
+
+Development agents (in `.claude/agents/`): `beat-analyzer`, `section-generator`, `structure-validator`.
+
+Behavioral rules for story development conversations load automatically via `.claude/rules/story-development.md` when working with structural files.
+
+### Development File Set
+- `docs/story_concept.md` — premise, emotional core, theme, status
+- `docs/15_beats.md` — 12-18 beat backbone with status header (exploratory/provisional/stable/locked)
+- `docs/characters.md` — role, wound, desire, fear, contradiction, arc, secrets, relationship map
+- `docs/world_rules.md` — only rules that materially affect causality
+- `docs/open_questions.md` — unresolved decisions with urgency and blocking status
+
+### Beat Stability Gate
+Section outlines cannot be marked authoritative until beats are at least Stable. This is enforced by a PreToolUse hook in `.claude/settings.json`. Run `/stabilize-beats` to assess and promote beat status.
 
 ## Continuity Tracking
 

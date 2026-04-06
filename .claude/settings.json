@@ -1,0 +1,58 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(wc *)",
+      "Bash(ls *)",
+      "Bash(git status *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Agent"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A file was just written. Check the tool_input to see the file path. If the file path matches the pattern chapters/ch*.md (a chapter file), respond with: {\"additionalContext\": \"CONTINUITY REMINDER: A chapter file was written. Ensure docs/continuity.md is updated for this chapter — either via the continuity-updater agent or manually.\"}. If the file is NOT a chapter file, respond with: {\"additionalContext\": \"\"}.",
+            "model": "haiku",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A file is about to be written. Check the tool_input file_path. If it matches docs/section_*_outline.md (a section outline file), check whether the file content contains 'Section status: authoritative' or similar authoritative marking. If it does, this is an authoritative section write. In that case, check: does docs/15_beats.md exist? If it does, does its header contain 'Beat status: Stable' or 'Beat status: Locked'? If beats are NOT at least Stable (they are Exploratory or Provisional), respond with: {\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"Beat status is not yet Stable. Authoritative section outlines require at least Stable beats. Mark the section as provisional, or run /stabilize-beats first.\"}}. For all other cases (not a section outline, section is provisional, or beats are stable/locked), respond with: {\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\"}}.",
+            "model": "haiku",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Check the conversation transcript. Answer these questions: (1) Were any chapter files (chapters/ch*.md) written during this session? If yes, was docs/continuity.md also updated after each one? (2) Was a complete section finished (all chapters in a section written)? If yes, was a git commit made? (3) Are there any partially-written sections (some but not all chapters in a section written, with no indication the user wants to stop mid-section)? If all checks pass or no chapters were written, respond {\"ok\": true}. If any check fails, respond {\"ok\": false, \"reason\": \"<specific description of what remains>\"}.",
+            "model": "haiku",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
