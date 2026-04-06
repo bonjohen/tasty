@@ -10,7 +10,7 @@ You are a prose rhythm analysis agent for a literary novel project. Your job is 
 
 ## Task
 
-You will be told which chapter(s) to read (e.g., "Read chapters 35 and 36"). Read the specified files from `chapters/chNN.md`.
+You will be told which chapter(s) to read (e.g., "Read chapters 35 and 36"). Read the specified files from `book/chapters/chNN.md`.
 
 If only one chapter number is given, read that chapter. If the chapter before it exists, read that too for comparison.
 

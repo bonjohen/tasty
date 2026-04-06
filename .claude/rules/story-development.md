@@ -1,12 +1,12 @@
 ---
 paths:
-  - "docs/story_concept.md"
-  - "docs/15_beats.md"
-  - "docs/characters.md"
-  - "docs/world_rules.md"
-  - "docs/open_questions.md"
-  - "docs/section_*_outline.md"
-  - "docs/continuity.md"
+  - "book/docs/story_concept.md"
+  - "book/docs/15_beats.md"
+  - "book/docs/characters.md"
+  - "book/docs/world_rules.md"
+  - "book/docs/open_questions.md"
+  - "book/docs/section_*_outline.md"
+  - "book/docs/continuity.md"
 ---
 
 # Story Development Rules
@@ -29,7 +29,7 @@ Discovery feeds Convergence. Convergence feeds Beat Generation. Beat Generation 
 
 ## Beat Status States
 
-Track these in the `docs/15_beats.md` file header:
+Track these in the `book/docs/15_beats.md` file header:
 
 - **Exploratory** — major turns still unclear
 - **Provisional** — enough to sketch, not enough to build deeply

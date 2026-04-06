@@ -5,29 +5,29 @@ allowed-tools: Read Glob Grep Bash(wc *) Bash(ls *)
 user-invocable: true
 ---
 
-Derive the current project state from the filesystem and report it. This replaces the manual `prompts/resume_session.md` loading process.
+Derive the current project state from the filesystem and report it. This replaces the manual `book/prompts/resume_session.md` loading process.
 
 ## Steps
 
-1. **Scan chapter files.** List all `chapters/ch*.md` files. Identify the highest chapter number. Count total chapters.
+1. **Scan chapter files.** List all `book/chapters/ch*.md` files. Identify the highest chapter number. Count total chapters.
 
-2. **Read section map.** Read `docs/section_map.md` to determine:
+2. **Read section map.** Read `book/docs/section_map.md` to determine:
    - Which sections are complete (all chapters in range exist)
    - Which section is current/next (first section with missing chapters)
    - Current act (I: Ch 1-16, II: Ch 17-33, III: Ch 34-48)
 
-3. **Read continuity state.** Read `docs/continuity.md`. Extract:
+3. **Read continuity state.** Read `book/docs/continuity.md`. Extract:
    - The last 3 timeline table entries (most recent chapters)
    - Current character states (Hurkuzak, Hakiia/Bleed, Vark, Tessivane — physical, location, knowledge, emotional)
    - Current Bleed stage
    - Count of open narrative threads
 
-4. **Read last chapter.** Read the most recently written chapter (`chapters/chNN.md` where NN is the highest number). Extract:
+4. **Read last chapter.** Read the most recently written chapter (`book/chapters/chNN.md` where NN is the highest number). Extract:
    - Where the narrative left off (location, scene state)
    - Emotional register at the end
    - POV character
 
-5. **Word count.** Run `wc -w chapters/ch*.md` for total word count.
+5. **Word count.** Run `wc -w book/chapters/ch*.md` for total word count.
 
 6. **Identify next work.** If chapters remain unwritten:
    - Identify the next chapter number and its section

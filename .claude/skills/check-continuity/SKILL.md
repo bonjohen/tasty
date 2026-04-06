@@ -1,12 +1,12 @@
 ---
 name: check-continuity
-description: "Validates that chapters and docs/continuity.md are consistent. Cross-references timeline, character state, Bleed stage, objects, and threads. Use when the user asks to check, verify, or validate continuity."
+description: "Validates that chapters and book/docs/continuity.md are consistent. Cross-references timeline, character state, Bleed stage, objects, and threads. Use when the user asks to check, verify, or validate continuity."
 argument-hint: "[chapter-number or range, e.g. 40-43]"
 allowed-tools: Read Glob Grep
 user-invocable: true
 ---
 
-Validate continuity between chapter files and `docs/continuity.md`.
+Validate continuity between chapter files and `book/docs/continuity.md`.
 
 ## Steps
 
@@ -14,11 +14,11 @@ Validate continuity between chapter files and `docs/continuity.md`.
    - If `$ARGUMENTS` specifies chapter numbers (e.g., "42" or "40-43"), check those chapters.
    - If no argument, check the last 3 written chapters (by highest chapter number).
 
-2. **Read the target chapters.** Read each chapter file in the scope from `chapters/chNN.md`.
+2. **Read the target chapters.** Read each chapter file in the scope from `book/chapters/chNN.md`.
 
-3. **Read continuity.md.** Read `docs/continuity.md` in full.
+3. **Read continuity.md.** Read `book/docs/continuity.md` in full.
 
-4. **Read section outlines.** For each chapter in scope, determine its section from `docs/section_map.md` and read the corresponding section outline for the expected Bleed stage and other requirements.
+4. **Read section outlines.** For each chapter in scope, determine its section from `book/docs/section_map.md` and read the corresponding section outline for the expected Bleed stage and other requirements.
 
 5. **Cross-reference each chapter.** For every chapter in scope, check:
 

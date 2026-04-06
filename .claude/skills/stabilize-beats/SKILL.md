@@ -8,11 +8,11 @@ Run the beat stabilization analysis. This is the gate between beat work and seri
 
 ## Steps
 
-1. **Check prerequisites.** Read `docs/15_beats.md`. If it doesn't exist, stop: "No beat file found. Generate beats first with `/generate-beats`."
+1. **Check prerequisites.** Read `book/docs/15_beats.md`. If it doesn't exist, stop: "No beat file found. Generate beats first with `/generate-beats`."
 
 2. **Spawn the beat-analyzer agent.** Use the Agent tool:
 
-   Prompt: "Analyze the beat file for structural stability. Read docs/15_beats.md, docs/story_concept.md (if exists), docs/characters.md (if exists), and docs/open_questions.md (if exists). Run the full Beat Expansion decision pass on each beat and return the stability assessment with beat-to-section coverage plan."
+   Prompt: "Analyze the beat file for structural stability. Read book/docs/15_beats.md, book/docs/story_concept.md (if exists), book/docs/characters.md (if exists), and book/docs/open_questions.md (if exists). Run the full Beat Expansion decision pass on each beat and return the stability assessment with beat-to-section coverage plan."
 
    Wait for the agent to return.
 
@@ -30,7 +30,7 @@ Run the beat stabilization analysis. This is the gate between beat work and seri
 
    If the agent recommends **Exploratory**: "The beat structure has significant unresolved elements. Recommend continuing discovery/convergence work before attempting stabilization."
 
-5. **If user approves Stable:** Update the beat status header in `docs/15_beats.md` from its current status to **Stable**. Also update the beat-to-section mapping table if the agent produced one.
+5. **If user approves Stable:** Update the beat status header in `book/docs/15_beats.md` from its current status to **Stable**. Also update the beat-to-section mapping table if the agent produced one.
 
 6. **If user approves Locked:** Update the beat status header to **Locked**. This means: beats will not change without explicit user instruction. Section expansion can proceed as authoritative.
 

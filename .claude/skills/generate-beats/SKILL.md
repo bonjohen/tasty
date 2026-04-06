@@ -1,6 +1,6 @@
 ---
 name: generate-beats
-description: "Generates or revises the beat backbone (docs/15_beats.md) from the current story concept, characters, and conversation context. Use when the user asks to create beats, generate the backbone, outline the story structure, or when enough discovery/convergence has happened to produce a first beat draft."
+description: "Generates or revises the beat backbone (book/docs/15_beats.md) from the current story concept, characters, and conversation context. Use when the user asks to create beats, generate the backbone, outline the story structure, or when enough discovery/convergence has happened to produce a first beat draft."
 user-invocable: true
 ---
 
@@ -9,12 +9,12 @@ Generate or revise the beat backbone for the novel.
 ## Prerequisites
 
 Check that these files exist:
-- `docs/story_concept.md` — REQUIRED. If missing, tell the user: "No story concept file found. The beat backbone needs at least a premise, emotional core, and ending direction. Either create `docs/story_concept.md` or discuss the story concept first."
-- `docs/characters.md` — recommended but not required
-- `docs/world_rules.md` — recommended but not required
-- `docs/open_questions.md` — read if exists, to understand unresolved decisions
+- `book/docs/story_concept.md` — REQUIRED. If missing, tell the user: "No story concept file found. The beat backbone needs at least a premise, emotional core, and ending direction. Either create `book/docs/story_concept.md` or discuss the story concept first."
+- `book/docs/characters.md` — recommended but not required
+- `book/docs/world_rules.md` — recommended but not required
+- `book/docs/open_questions.md` — read if exists, to understand unresolved decisions
 
-If `docs/15_beats.md` already exists, read it. This is a revision, not a fresh generation. Preserve what's working and revise what needs to change.
+If `book/docs/15_beats.md` already exists, read it. This is a revision, not a fresh generation. Preserve what's working and revise what needs to change.
 
 ## Beat Generation Rules
 
@@ -47,7 +47,7 @@ Not all of these require separate beats. Some may combine. Some stories need add
 
 ## Beat Format
 
-Write `docs/15_beats.md` with this structure:
+Write `book/docs/15_beats.md` with this structure:
 
 ```markdown
 # [Story Title] — Beat Architecture

@@ -10,11 +10,11 @@ Generate a complete project dashboard for the novel.
 
 ## Steps
 
-1. **List all chapter files.** Use Glob to find all `chapters/ch*.md` files.
+1. **List all chapter files.** Use Glob to find all `book/chapters/ch*.md` files.
 
-2. **Read the section map.** Read `docs/section_map.md` to get the section-to-chapter mapping.
+2. **Read the section map.** Read `book/docs/section_map.md` to get the section-to-chapter mapping.
 
-3. **Get word counts.** Run `wc -w chapters/ch*.md` to get word counts for all existing chapters.
+3. **Get word counts.** Run `wc -w book/chapters/ch*.md` to get word counts for all existing chapters.
 
 4. **Get chapter titles.** For each existing chapter file, read just the first line to extract the `# Chapter N: Title` header.
 

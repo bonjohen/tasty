@@ -11,24 +11,24 @@ Generate a development status dashboard for the story project.
 ## Steps
 
 1. **Check which files exist.** Use Glob to find:
-   - `docs/story_concept.md`
-   - `docs/15_beats.md`
-   - `docs/characters.md`
-   - `docs/world_rules.md`
-   - `docs/open_questions.md`
-   - `docs/continuity.md`
-   - `docs/section_*_outline.md` (all section outlines)
-   - `docs/section_map.md`
-   - `chapters/ch*.md` (any drafted chapters)
+   - `book/docs/story_concept.md`
+   - `book/docs/15_beats.md`
+   - `book/docs/characters.md`
+   - `book/docs/world_rules.md`
+   - `book/docs/open_questions.md`
+   - `book/docs/continuity.md`
+   - `book/docs/section_*_outline.md` (all section outlines)
+   - `book/docs/section_map.md`
+   - `book/chapters/ch*.md` (any drafted chapters)
 
 2. **Read status headers.** For files that exist:
-   - `docs/story_concept.md` — look for architecture status block (concept/beats/sections status)
-   - `docs/15_beats.md` — look for beat status header (exploratory/provisional/stable/locked) and beat count
-   - Each `docs/section_*_outline.md` — look for section status (provisional/authoritative)
+   - `book/docs/story_concept.md` — look for architecture status block (concept/beats/sections status)
+   - `book/docs/15_beats.md` — look for beat status header (exploratory/provisional/stable/locked) and beat count
+   - Each `book/docs/section_*_outline.md` — look for section status (provisional/authoritative)
 
-3. **Count open questions.** If `docs/open_questions.md` exists, count total questions and count how many are marked as blocking beat stabilization or section authority.
+3. **Count open questions.** If `book/docs/open_questions.md` exists, count total questions and count how many are marked as blocking beat stabilization or section authority.
 
-4. **Count characters.** If `docs/characters.md` exists, count major characters with defined arcs.
+4. **Count characters.** If `book/docs/characters.md` exists, count major characters with defined arcs.
 
 5. **Count sections and chapters.** How many section outlines exist? How many are provisional vs. authoritative? How many total chapters are specified? How many chapters are drafted?
 

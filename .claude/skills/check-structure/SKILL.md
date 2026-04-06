@@ -12,10 +12,10 @@ Validate the consistency of all story-structural files.
 1. **Spawn the structure-validator agent.**
 
    If `$ARGUMENTS` contains "draft-ready" or "readiness":
-   Prompt: "Validate all story-structural files in docs/ for consistency AND assess draft readiness. Read all available files: docs/story_concept.md, docs/15_beats.md, docs/characters.md, docs/world_rules.md, docs/open_questions.md, docs/continuity.md, all docs/section_*_outline.md files, and docs/section_map.md. Run all validation checks including the draft readiness assessment."
+   Prompt: "Validate all story-structural files in book/docs/ for consistency AND assess draft readiness. Read all available files: book/docs/story_concept.md, book/docs/15_beats.md, book/docs/characters.md, book/docs/world_rules.md, book/docs/open_questions.md, book/docs/continuity.md, all book/docs/section_*_outline.md files, and book/docs/section_map.md. Run all validation checks including the draft readiness assessment."
 
    Otherwise:
-   Prompt: "Validate all story-structural files in docs/ for consistency. Read all available files: docs/story_concept.md, docs/15_beats.md, docs/characters.md, docs/world_rules.md, docs/open_questions.md, docs/continuity.md, all docs/section_*_outline.md files, and docs/section_map.md. Run all validation checks. Do NOT run the draft readiness assessment unless specifically requested."
+   Prompt: "Validate all story-structural files in book/docs/ for consistency. Read all available files: book/docs/story_concept.md, book/docs/15_beats.md, book/docs/characters.md, book/docs/world_rules.md, book/docs/open_questions.md, book/docs/continuity.md, all book/docs/section_*_outline.md files, and book/docs/section_map.md. Run all validation checks. Do NOT run the draft readiness assessment unless specifically requested."
 
 2. **Wait for the agent to return.**
 

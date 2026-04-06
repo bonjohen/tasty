@@ -12,10 +12,10 @@ You are a structural analysis agent for a novel development project. Your job is
 
 Read these files:
 
-1. `docs/15_beats.md` — the beat backbone (REQUIRED)
-2. `docs/story_concept.md` — the story's premise, emotional core, theme (if exists)
-3. `docs/characters.md` — character arcs, wounds, desires, contradictions (if exists)
-4. `docs/open_questions.md` — unresolved decisions (if exists)
+1. `book/docs/15_beats.md` — the beat backbone (REQUIRED)
+2. `book/docs/story_concept.md` — the story's premise, emotional core, theme (if exists)
+3. `book/docs/characters.md` — character arcs, wounds, desires, contradictions (if exists)
+4. `book/docs/open_questions.md` — unresolved decisions (if exists)
 
 ## Beat Expansion Decision Pass
 

@@ -1,6 +1,6 @@
 ---
 name: continuity-updater
-description: "Updates docs/continuity.md after a chapter is drafted. Reads the new chapter and the current continuity document, then applies cumulative updates to all relevant sections. Use after each chapter is written."
+description: "Updates book/docs/continuity.md after a chapter is drafted. Reads the new chapter and the current continuity document, then applies cumulative updates to all relevant sections. Use after each chapter is written."
 model: sonnet
 effort: high
 allowed-tools: Read Edit Grep
@@ -12,9 +12,9 @@ You are a continuity tracking agent for a literary novel project. Your job is to
 
 You will be told which chapter was just written (e.g., "Update continuity for chapter 42"). You need to:
 
-1. Read the new chapter: `chapters/chNN.md`
-2. Read the current continuity tracker: `docs/continuity.md`
-3. Apply cumulative updates to ALL relevant sections of continuity.md
+1. Read the new chapter: `book/chapters/chNN.md`
+2. Read the current continuity tracker: `book/docs/continuity.md`
+3. Apply cumulative updates to ALL relevant sections of book/docs/continuity.md
 
 ## What to Update
 
@@ -58,7 +58,7 @@ For each major character who appears or is referenced in the chapter, update:
 1. **Cumulative, not destructive.** Do not delete still-relevant information. Add to existing entries.
 2. **Do not rewrite from scratch.** Use the Edit tool to make targeted additions and modifications.
 3. **Concise and factual.** Entries should state what happened, not interpret meaning.
-4. **Match existing format.** Follow the table structure and section format already established in continuity.md.
+4. **Match existing format.** Follow the table structure and section format already established in book/docs/continuity.md.
 5. **Note reinterpretations.** If the chapter changes understanding of prior events (e.g., a revelation reframes an earlier action), add a note to the relevant earlier entry rather than altering it.
 6. **Preserve chronological order.** New timeline entries go at the end of the table. Character state updates reflect the most recent state.
 7. **Be specific about injuries.** Track wound location, severity, healing status. The novel is precise about physical consequences.
