@@ -1,24 +1,32 @@
 ---
 name: check-continuity
-description: "Validates that chapters and book/docs/continuity.md are consistent. Cross-references timeline, character state, Bleed stage, objects, and threads. Use when the user asks to check, verify, or validate continuity."
-argument-hint: "[chapter-number or range, e.g. 40-43]"
+description: "Validates that chapters and the book's continuity tracker are consistent. Cross-references timeline, character state, any book-specific narrative stages, objects, and threads. Use when the user asks to check, verify, or validate continuity."
+argument-hint: "[book-name] [chapter-number or range, e.g. 40-43]"
 allowed-tools: Read Glob Grep
 user-invocable: true
 ---
 
-Validate continuity between chapter files and `book/docs/continuity.md`.
+Validate continuity between chapter files and the book's `continuity.md`.
+
+## Step 0: Determine Target Book
+
+Resolve which book to operate on; the resolved path replaces `{book}` for the rest of this skill.
+
+1. Parse `$ARGUMENTS`. If the first token matches a subdirectory of `books/`, that is the book. Strip it; the remainder is the chapter scope.
+2. Otherwise, if only one book has chapters, use it. If multiple, ask the user which.
+3. Verify `{book}/chapters/`, `{book}/docs/continuity.md`, and `{book}/docs/section_map.md` exist. If any is missing, stop and report.
 
 ## Steps
 
 1. **Determine scope.**
-   - If `$ARGUMENTS` specifies chapter numbers (e.g., "42" or "40-43"), check those chapters.
+   - If the remaining `$ARGUMENTS` (after book extraction) specifies chapter numbers (e.g., "42" or "40-43"), check those chapters.
    - If no argument, check the last 3 written chapters (by highest chapter number).
 
-2. **Read the target chapters.** Read each chapter file in the scope from `book/chapters/chNN.md`.
+2. **Read the target chapters.** Read each chapter file in the scope from `{book}/chapters/chNN.md`.
 
-3. **Read continuity.md.** Read `book/docs/continuity.md` in full.
+3. **Read continuity.md.** Read `{book}/docs/continuity.md` in full.
 
-4. **Read section outlines.** For each chapter in scope, determine its section from `book/docs/section_map.md` and read the corresponding section outline for the expected Bleed stage and other requirements.
+4. **Read section outlines.** For each chapter in scope, determine its section from `{book}/docs/section_map.md` and read the corresponding section outline for any expected narrative-stage markers (e.g., voice-bleed stage if the book uses one) and other requirements.
 
 5. **Cross-reference each chapter.** For every chapter in scope, check:
 
@@ -39,9 +47,9 @@ Validate continuity between chapter files and `book/docs/continuity.md`.
 - If a character learns something new in this chapter, is it recorded?
 - Does the character reference knowledge they shouldn't have yet (based on continuity.md's tracking of when knowledge was gained)?
 
-### Bleed Stage
-- Does the Bleed behavior in the chapter match what the section outline specifies?
-- Does it match what continuity.md records as the current Bleed stage?
+### Book-Specific Narrative Stage (if applicable)
+- If the book's continuity tracker maintains a named narrative stage (e.g., voice-bleed stage, power level, corruption progression), does the chapter's handling of it match what the section outline specifies?
+- Does it match what continuity.md records as the current stage?
 - Is there an unrecorded progression?
 
 ### Objects and Locations
@@ -76,5 +84,5 @@ Validate continuity between chapter files and `book/docs/continuity.md`.
 
 Severity levels:
 - **ERROR:** Direct contradiction (wrong location, impossible knowledge, missing injuries)
-- **WARNING:** Missing or incomplete entry (timeline row exists but key events incomplete, Bleed stage not updated)
+- **WARNING:** Missing or incomplete entry (timeline row exists but key events incomplete, narrative-stage markers not updated)
 - **INFO:** Minor inconsistency or style issue (location name varies slightly, timeline day is ambiguous)

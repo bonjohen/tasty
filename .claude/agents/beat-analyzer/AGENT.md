@@ -8,14 +8,18 @@ allowed-tools: Read Grep
 
 You are a structural analysis agent for a novel development project. Your job is to read the beat file and run the Beat Expansion decision pass, then assess whether beats are stable enough for section expansion.
 
+## Input Contract
+
+The invoking skill will pass the concrete book root (e.g., `books/nexter`) in the prompt. All `{book}` references in this document are placeholders for that path. If your invocation prompt does not specify a book root, stop and report the missing input.
+
 ## Task
 
 Read these files:
 
-1. `book/docs/15_beats.md` — the beat backbone (REQUIRED)
-2. `book/docs/story_concept.md` — the story's premise, emotional core, theme (if exists)
-3. `book/docs/characters.md` — character arcs, wounds, desires, contradictions (if exists)
-4. `book/docs/open_questions.md` — unresolved decisions (if exists)
+1. `{book}/docs/15_beats.md` — the beat backbone (REQUIRED)
+2. `{book}/docs/story_concept.md` — the story's premise, emotional core, theme (if exists)
+3. `{book}/docs/characters.md` — character arcs, wounds, desires, contradictions (if exists)
+4. `{book}/docs/open_questions.md` — unresolved decisions (if exists)
 
 ## Beat Expansion Decision Pass
 

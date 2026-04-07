@@ -1,21 +1,31 @@
 ---
 name: check-structure
 description: "Validates consistency across all story-structural files. Checks beat coverage, section completeness, concept-beat alignment, character arcs, continuity, and status hierarchy. Use when the user asks to validate structure, check consistency, verify draft readiness, or after major structural revisions."
-argument-hint: "[draft-ready]"
+argument-hint: "[book-name] [draft-ready]"
 user-invocable: true
 ---
 
 Validate the consistency of all story-structural files.
 
+## Step 0: Determine Target Book
+
+Resolve which book to validate; the resolved path replaces `{book}` for the rest of this skill.
+
+1. Parse `$ARGUMENTS`. If the first token matches a subdirectory of `books/`, that is the book. Strip it; the remainder is the flag (if any).
+2. Otherwise, if only one book exists under `books/`, use it. If multiple, ask the user which.
+3. Verify `{book}/docs/` exists. If not, stop and report the book as uninitialized.
+
 ## Steps
 
 1. **Spawn the structure-validator agent.**
 
-   If `$ARGUMENTS` contains "draft-ready" or "readiness":
-   Prompt: "Validate all story-structural files in book/docs/ for consistency AND assess draft readiness. Read all available files: book/docs/story_concept.md, book/docs/15_beats.md, book/docs/characters.md, book/docs/world_rules.md, book/docs/open_questions.md, book/docs/continuity.md, all book/docs/section_*_outline.md files, and book/docs/section_map.md. Run all validation checks including the draft readiness assessment."
+   Substitute the concrete book root (e.g., `books/tasty`) for `{book}` in the prompt you pass to the agent.
+
+   If the remaining arguments contain "draft-ready" or "readiness":
+   Prompt: "Validate all story-structural files in {book}/docs/ for consistency AND assess draft readiness. Book root: {book}. Read all available files: {book}/docs/story_concept.md, {book}/docs/15_beats.md, {book}/docs/characters.md, {book}/docs/world_rules.md, {book}/docs/open_questions.md, {book}/docs/continuity.md, all {book}/docs/section_*_outline.md files, and {book}/docs/section_map.md. Run all validation checks including the draft readiness assessment."
 
    Otherwise:
-   Prompt: "Validate all story-structural files in book/docs/ for consistency. Read all available files: book/docs/story_concept.md, book/docs/15_beats.md, book/docs/characters.md, book/docs/world_rules.md, book/docs/open_questions.md, book/docs/continuity.md, all book/docs/section_*_outline.md files, and book/docs/section_map.md. Run all validation checks. Do NOT run the draft readiness assessment unless specifically requested."
+   Prompt: "Validate all story-structural files in {book}/docs/ for consistency. Book root: {book}. Read all available files: {book}/docs/story_concept.md, {book}/docs/15_beats.md, {book}/docs/characters.md, {book}/docs/world_rules.md, {book}/docs/open_questions.md, {book}/docs/continuity.md, all {book}/docs/section_*_outline.md files, and {book}/docs/section_map.md. Run all validation checks. Do NOT run the draft readiness assessment unless specifically requested."
 
 2. **Wait for the agent to return.**
 

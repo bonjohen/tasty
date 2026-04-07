@@ -1,15 +1,23 @@
 ---
 name: expand-sections
 description: "Generates section outline files from the stabilized beat backbone. Can generate all sections or a specific range. Enforces the beat stability gate — refuses to generate authoritative sections if beats are not at least Stable. Use when the user asks to expand sections, generate outlines, or build the section architecture."
-argument-hint: "[section range, e.g. 1-5 or 'all']"
+argument-hint: "[book-name] [section range, e.g. 1-5 or 'all']"
 user-invocable: true
 ---
 
 Generate section outline files from the beat backbone.
 
+## Step 0: Determine Target Book
+
+Resolve which book to expand sections for; the resolved path replaces `{book}` for the rest of this skill.
+
+1. Parse `$ARGUMENTS`. If the first token matches a subdirectory of `books/`, that is the book. Strip it; the remainder is the section range.
+2. Otherwise, if only one book exists under `books/`, use it. If multiple, ask the user which.
+3. Verify `{book}/docs/15_beats.md` exists. If not, stop: "No beat file for this book. Run `/generate-beats {book-name}` first."
+
 ## Step 1: Gate Check
 
-Read `book/docs/15_beats.md` and check the beat status header.
+Read `{book}/docs/15_beats.md` and check the beat status header.
 
 - If **Locked** or **Stable**: proceed. Sections will be marked **authoritative**.
 - If **Provisional**: warn the user. "Beats are Provisional. Section outlines generated now will be marked provisional and may need significant revision. Recommend running `/stabilize-beats` first. Continue anyway?" If proceeding, mark all generated sections as **provisional**.
@@ -18,22 +26,22 @@ Read `book/docs/15_beats.md` and check the beat status header.
 
 ## Step 2: Determine Scope
 
-If `$ARGUMENTS` specifies a range (e.g., "1-5", "12-15", "all"):
+If the remaining `$ARGUMENTS` (after book extraction) specifies a range (e.g., "1-5", "12-15", "all"):
 - Generate those sections.
-- Read the beat-to-section mapping from `book/docs/15_beats.md` to determine which beats each section covers.
+- Read the beat-to-section mapping from `{book}/docs/15_beats.md` to determine which beats each section covers.
 
 If no argument:
-- Check which section outlines already exist (Glob for `book/docs/section_*_outline.md`).
+- Check which section outlines already exist (Glob for `{book}/docs/section_*_outline.md`).
 - Generate the next missing batch (up to 5 sections per invocation to avoid context exhaustion).
 
 ## Step 3: Read Context
 
 Read these files once (they're shared across all sections):
-- `book/docs/15_beats.md` — the backbone
-- `book/docs/story_concept.md` — premise and theme (if exists)
-- `book/docs/characters.md` — character reference (if exists)
-- `book/docs/world_rules.md` — causality rules (if exists)
-- `book/docs/continuity.md` — state tracker (if exists)
+- `{book}/docs/15_beats.md` — the backbone
+- `{book}/docs/story_concept.md` — premise and theme (if exists)
+- `{book}/docs/characters.md` — character reference (if exists)
+- `{book}/docs/world_rules.md` — causality rules (if exists)
+- `{book}/docs/continuity.md` — state tracker (if exists)
 
 ## Step 4: Generate Sections
 
@@ -41,13 +49,13 @@ For sections that don't depend on each other's handoff (non-adjacent sections), 
 
 For sections that ARE adjacent and need handoff context, generate them **sequentially** — each one needs the previous section's output to know what state it's inheriting.
 
-For each section, spawn the section-generator agent:
+For each section, spawn the section-generator agent. Substitute the concrete book root (e.g., `books/nexter`) for `{book}` in the prompt:
 
-Prompt: "Generate section [N] covering beats [X-Y]. Read book/docs/15_beats.md, book/docs/story_concept.md, book/docs/characters.md, book/docs/world_rules.md, book/docs/continuity.md, and adjacent section outlines book/docs/section_[NN-1]_outline.md and book/docs/section_[NN+1]_outline.md (if they exist). Beat status is [status]. Write the section outline to book/docs/section_[NN]_outline.md."
+Prompt: "Generate section [N] covering beats [X-Y] for book root {book}. Read {book}/docs/15_beats.md, {book}/docs/story_concept.md, {book}/docs/characters.md, {book}/docs/world_rules.md, {book}/docs/continuity.md, and adjacent section outlines {book}/docs/section_[NN-1]_outline.md and {book}/docs/section_[NN+1]_outline.md (if they exist). Beat status is [status]. Write the section outline to {book}/docs/section_[NN]_outline.md."
 
 ## Step 5: Update Section Map
 
-After all sections are generated, update or create `book/docs/section_map.md` with the current section-to-chapter mapping:
+After all sections are generated, update or create `{book}/docs/section_map.md` with the current section-to-chapter mapping:
 
 ```markdown
 # Section Map

@@ -1,7 +1,7 @@
 ---
 name: write-section
 description: "Main orchestrator for novel chapter production. Loads context via parallel subagents, drafts chapters sequentially, updates continuity, runs quality checks, and commits at section boundaries. Use when the user asks to write the next section, write section N, continue writing, or draft chapters."
-argument-hint: "[section-number]"
+argument-hint: "[book-name] [section-number]"
 user-invocable: true
 ---
 
@@ -9,18 +9,32 @@ You are the novel writing orchestrator. Follow this process exactly to write all
 
 ---
 
+## Step 0: Determine Target Book
+
+Identify which book to operate on, producing a concrete book root path (e.g., `books/tasty`) to substitute for `{book}` throughout the rest of this skill:
+
+1. Parse `$ARGUMENTS`. If it begins with a book name matching a subdirectory of `books/` (e.g., `tasty`, `nexter`), that is the book. Strip it from arguments; the remainder is the section number (if any).
+2. If no book was specified, list subdirectories of `books/`.
+   - If exactly one book exists with writable chapters (contains a `chapters/` directory and a `CLAUDE.md` that is not a placeholder), use it.
+   - If multiple books exist, stop and ask: "Which book? Available: [list]"
+3. Verify the chosen book has `{book}/CLAUDE.md`, `{book}/docs/section_map.md`, and `{book}/chapters/`. If any are missing, STOP and report.
+
+From here on, treat `{book}` as the concrete book root you resolved (e.g., `books/tasty`). When invoking agents, substitute the concrete path in the prompt text.
+
+---
+
 ## Step 1: Determine Target Section
 
-If `$ARGUMENTS` provides a section number, use that. Otherwise:
+If the remaining `$ARGUMENTS` (after book extraction) provides a section number, use that. Otherwise:
 
-1. List all files in `book/chapters/` to find existing chapter files matching `chNN.md`.
+1. List all files in `{book}/chapters/` to find existing chapter files matching `chNN.md`.
 2. Identify the highest existing chapter number.
-3. Read `book/docs/section_map.md` to find which section contains the next unwritten chapter.
+3. Read `{book}/docs/section_map.md` to find which section contains the next unwritten chapter.
 4. That section is the target.
 
 **Guardrails:**
 - If chapter numbering has gaps, STOP and report the gap.
-- If all 48 chapters exist, report that all sections are complete and STOP.
+- If all sections in `{book}/docs/section_map.md` are complete, report that and STOP.
 - If the target section has some chapters already written, only write the REMAINING unwritten ones.
 - Never overwrite an existing chapter unless the user explicitly instructs it.
 
@@ -31,15 +45,15 @@ If `$ARGUMENTS` provides a section number, use that. Otherwise:
 Spawn THREE agents simultaneously (in a single message with three Agent tool calls):
 
 ### Agent 1: context-loader
-Prompt: "Load context for the novel project. Read book/CLAUDE.md, book/docs/01_story_analysis.md, and book/docs/continuity.md. Return the structured summary."
+Prompt: "Load context for the novel project. Read {book}/CLAUDE.md, {book}/docs/01_story_analysis.md, and {book}/docs/continuity.md. Return the structured summary."
 
 ### Agent 2: outline-reader
-Prompt: "Read section [N] outlines. Read book/docs/section_[NN]_outline.md, book/docs/section_[NN-1]_outline.md (if exists), and book/docs/section_[NN+1]_outline.md (if exists). Return the chapter specifications."
+Prompt: "Read section [N] outlines. Read {book}/docs/section_[NN]_outline.md, {book}/docs/section_[NN-1]_outline.md (if exists), and {book}/docs/section_[NN+1]_outline.md (if exists). Return the chapter specifications."
 
 (Use zero-padded section numbers: 01, 02, ... 23)
 
 ### Agent 3: rhythm-reader
-Prompt: "Read chapters [last 1-2 chapter numbers] from book/chapters/. Analyze prose rhythm and handoff state."
+Prompt: "Read chapters [last 1-2 chapter numbers] from {book}/chapters/. Analyze prose rhythm and handoff state."
 
 (Use the most recently written chapter(s). If starting from scratch, skip this agent.)
 
@@ -56,7 +70,7 @@ For each unwritten chapter in the target section, in order:
 Using the context from all three agents, draft the chapter following this priority chain:
 
 1. **Section outline beats and notes** (from outline-reader) — these are the primary instructions
-2. **book/CLAUDE.md voice/style rules** (from context-loader) — register, POV, Bleed handling, prohibitions
+2. **{book}/CLAUDE.md voice/style rules** (from context-loader) — register, POV, Bleed handling, prohibitions
 3. **Story analysis** (from context-loader) — thematic architecture and emotional design
 4. **Continuity state** (from context-loader) — current character states, timeline, open threads
 5. **Prose rhythm** (from rhythm-reader) — maintain tonal continuity with preceding chapter
@@ -93,7 +107,7 @@ Use the title from the section outline unless there is a clear continuity reason
 
 ### 3b. Save the Chapter
 
-Write to `book/chapters/chNN.md` (zero-padded: ch01, ch02, ... ch48).
+Write to `{book}/chapters/chNN.md` (zero-padded: ch01, ch02, ... ch48).
 
 After saving, re-read the file and verify:
 - Title is correct
@@ -106,10 +120,10 @@ After saving, re-read the file and verify:
 Spawn TWO agents simultaneously:
 
 **Agent: continuity-updater**
-Prompt: "Update continuity for chapter [N]. Read book/chapters/ch[NN].md and book/docs/continuity.md, then apply cumulative updates to all relevant sections of book/docs/continuity.md."
+Prompt: "Update continuity for chapter [N]. Read {book}/chapters/ch[NN].md and {book}/docs/continuity.md, then apply cumulative updates to all relevant sections of {book}/docs/continuity.md."
 
 **Agent: quality-checker**
-Prompt: "Check chapter [N]. Validate book/chapters/ch[NN].md against the section outline, book/CLAUDE.md rules, and book/docs/continuity.md."
+Prompt: "Check chapter [N]. Validate {book}/chapters/ch[NN].md against the section outline, {book}/CLAUDE.md rules, and {book}/docs/continuity.md."
 
 **Wait for both agents to return.**
 
@@ -122,7 +136,7 @@ If the quality checker reports FAIL on any criterion:
 
 Before drafting the next chapter in the section:
 1. Re-read the chapter you just wrote (for prose rhythm continuity)
-2. Re-read `book/docs/continuity.md` (for updated state)
+2. Re-read `{book}/docs/continuity.md` (for updated state)
 3. Then proceed to draft the next chapter
 
 ---
@@ -159,8 +173,8 @@ Section [N+1]: [Title] — [goal from outline header]
 Stage and commit all changes:
 
 ```bash
-git add book/chapters/chNN.md [list all new chapter files]
-git add book/docs/continuity.md
+git add {book}/chapters/chNN.md [list all new chapter files]
+git add {book}/docs/continuity.md
 git commit -m "Draft section [N]: [title] (ch[start]-ch[end])"
 ```
 
@@ -170,7 +184,7 @@ Do NOT push unless the user explicitly asks.
 
 ## Operational Guardrails
 
-- If required context files are missing (book/CLAUDE.md, book/docs/continuity.md, section outlines), STOP and report.
+- If required context files are missing ({book}/CLAUDE.md, {book}/docs/continuity.md, section outlines), STOP and report.
 - If chapter numbering has gaps, STOP and report.
 - If a section outline is missing, STOP and report.
 - If continuity and the latest chapter materially conflict, STOP and report before drafting.

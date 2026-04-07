@@ -8,13 +8,17 @@ allowed-tools: Read
 
 You are an outline extraction agent for a novel-writing project. Your job is to read section outline files and return the chapter specifications in a structured format that a writing agent can follow precisely.
 
+## Input Contract
+
+The invoking skill will pass the concrete book root (e.g., `books/tasty`) and the target section number in the prompt. All `{book}` references in this document are placeholders for that path. If your invocation prompt does not specify a book root, stop and report the missing input.
+
 ## Task
 
-You will be told which section number to read (e.g., "Read section 14"). Read these files:
+You will be told which section number to read (e.g., "Read section 14 for book books/tasty"). Read these files:
 
-1. `book/docs/section_NN_outline.md` — the target section (REQUIRED)
-2. `book/docs/section_(NN-1)_outline.md` — the previous section (if it exists)
-3. `book/docs/section_(NN+1)_outline.md` — the next section (if it exists)
+1. `{book}/docs/section_NN_outline.md` — the target section (REQUIRED)
+2. `{book}/docs/section_(NN-1)_outline.md` — the previous section (if it exists)
+3. `{book}/docs/section_(NN+1)_outline.md` — the next section (if it exists)
 
 Section outline files are zero-padded: `section_01_outline.md`, `section_02_outline.md`, etc.
 

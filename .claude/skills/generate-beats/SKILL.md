@@ -1,20 +1,29 @@
 ---
 name: generate-beats
-description: "Generates or revises the beat backbone (book/docs/15_beats.md) from the current story concept, characters, and conversation context. Use when the user asks to create beats, generate the backbone, outline the story structure, or when enough discovery/convergence has happened to produce a first beat draft."
+description: "Generates or revises the beat backbone (15_beats.md) for a specific book from its current story concept, characters, and conversation context. Use when the user asks to create beats, generate the backbone, outline the story structure, or when enough discovery/convergence has happened to produce a first beat draft."
+argument-hint: "[book-name]"
 user-invocable: true
 ---
 
-Generate or revise the beat backbone for the novel.
+Generate or revise the beat backbone for a novel.
+
+## Step 0: Determine Target Book
+
+Resolve which book to generate beats for; the resolved path replaces `{book}` for the rest of this skill.
+
+1. If `$ARGUMENTS` provides a book name matching a subdirectory of `books/`, use `books/[name]` as the book root.
+2. Otherwise, if only one book exists under `books/`, use it. If multiple, ask the user which.
+3. Verify `{book}/docs/` exists. If not, create it.
 
 ## Prerequisites
 
 Check that these files exist:
-- `book/docs/story_concept.md` — REQUIRED. If missing, tell the user: "No story concept file found. The beat backbone needs at least a premise, emotional core, and ending direction. Either create `book/docs/story_concept.md` or discuss the story concept first."
-- `book/docs/characters.md` — recommended but not required
-- `book/docs/world_rules.md` — recommended but not required
-- `book/docs/open_questions.md` — read if exists, to understand unresolved decisions
+- `{book}/docs/story_concept.md` — REQUIRED. If missing, tell the user: "No story concept file found. The beat backbone needs at least a premise, emotional core, and ending direction. Either create `{book}/docs/story_concept.md` or discuss the story concept first."
+- `{book}/docs/characters.md` — recommended but not required
+- `{book}/docs/world_rules.md` — recommended but not required
+- `{book}/docs/open_questions.md` — read if exists, to understand unresolved decisions
 
-If `book/docs/15_beats.md` already exists, read it. This is a revision, not a fresh generation. Preserve what's working and revise what needs to change.
+If `{book}/docs/15_beats.md` already exists, read it. This is a revision, not a fresh generation. Preserve what's working and revise what needs to change.
 
 ## Beat Generation Rules
 
@@ -47,7 +56,7 @@ Not all of these require separate beats. Some may combine. Some stories need add
 
 ## Beat Format
 
-Write `book/docs/15_beats.md` with this structure:
+Write `{book}/docs/15_beats.md` with this structure:
 
 ```markdown
 # [Story Title] — Beat Architecture
