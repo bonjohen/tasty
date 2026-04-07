@@ -52,15 +52,15 @@ Targets section 14 specifically. Skips auto-detection.
 
 ### What happens during `/write-section`
 
-1. Scans `book/chapters/` to find the next unwritten chapter
-2. Looks up the section in `book/docs/section_map.md`
+1. Scans `books/[name]/chapters/` to find the next unwritten chapter
+2. Looks up the section in `books/[name]/docs/section_map.md`
 3. Spawns three agents in parallel:
-   - **context-loader** — reads `book/CLAUDE.md`, story analysis, continuity; returns compressed summary
+   - **context-loader** — reads `books/[name]/CLAUDE.md`, story analysis, continuity; returns compressed summary
    - **outline-reader** — reads current + adjacent section outlines; returns chapter specs
    - **rhythm-reader** — reads last 1-2 chapters; returns prose rhythm analysis
 4. Drafts each chapter sequentially using the agent summaries
 5. After each chapter, spawns two more agents in parallel:
-   - **continuity-updater** — updates `book/docs/continuity.md`
+   - **continuity-updater** — updates `books/[name]/docs/continuity.md`
    - **quality-checker** — validates against a 10-point checklist
 6. Reports section completion
 7. Commits to git (does not push)
@@ -79,13 +79,13 @@ Discovery conversation → /generate-beats → /stabilize-beats → /expand-sect
 
 ### 1. Discovery and Convergence
 
-Start a conversation. When working with structural files (`book/docs/story_concept.md`, `book/docs/15_beats.md`, `book/docs/characters.md`, etc.), behavioral rules load automatically from `.claude/rules/story-development.md`. Claude will ask focused questions in a structured format and produce files incrementally.
+Start a conversation. When working with structural files (`books/[name]/docs/story_concept.md`, `books/[name]/docs/15_beats.md`, `books/[name]/docs/characters.md`, etc.), behavioral rules load automatically from `.claude/rules/story-development.md`. Claude will ask focused questions in a structured format and produce files incrementally.
 
 Create the initial files through conversation:
-- `book/docs/story_concept.md` — premise, emotional core, theme
-- `book/docs/characters.md` — characters with wound, desire, fear, contradiction, arc
-- `book/docs/world_rules.md` — rules that affect causality
-- `book/docs/open_questions.md` — unresolved decisions
+- `books/[name]/docs/story_concept.md` — premise, emotional core, theme
+- `books/[name]/docs/characters.md` — characters with wound, desire, fear, contradiction, arc
+- `books/[name]/docs/world_rules.md` — rules that affect causality
+- `books/[name]/docs/open_questions.md` — unresolved decisions
 
 ### 2. Generate beats
 
@@ -93,7 +93,7 @@ Create the initial files through conversation:
 /generate-beats
 ```
 
-Creates `book/docs/15_beats.md` — a 12-18 beat backbone. Each beat describes what changes, why it matters emotionally, what is learned/lost/reversed, and what it sets up. Marked as Exploratory or Provisional.
+Creates `books/[name]/docs/15_beats.md` — a 12-18 beat backbone. Each beat describes what changes, why it matters emotionally, what is learned/lost/reversed, and what it sets up. Marked as Exploratory or Provisional.
 
 ### 3. Stabilize beats
 
@@ -145,7 +145,7 @@ Same checks plus a full draft-readiness assessment. When this passes, the archit
 /check-continuity 40-43
 ```
 
-Validates specific chapters against `book/docs/continuity.md`. Cross-references timeline, character state, injuries, knowledge, Bleed stage, objects, and narrative threads. Reports errors, warnings, and info-level issues.
+Validates specific chapters against `books/[name]/docs/continuity.md`. Cross-references timeline, character state, injuries, knowledge, Bleed stage, objects, and narrative threads. Reports errors, warnings, and info-level issues.
 
 ```
 /check-continuity
@@ -169,29 +169,39 @@ Validates consistency across all story-structural files. 10-point check: beat co
 .
 ├── CLAUDE.md                               # Workflow rules (CLI skills, agents, file conventions)
 ├── README.md
-├── book/
-│   ├── CLAUDE.md                           # Story rules (voice, characters, world, prohibitions)
-│   ├── chapters/
-│   │   ├── ch01.md                         # Chapter 1: The Older Brother's Country
-│   │   ├── ch02.md                         # ...
-│   │   └── ch48.md                         # Chapter 48 (final)
-│   ├── docs/
-│   │   ├── 01_story_analysis.md            # 23-section narrative architecture
-│   │   ├── 01_story_beats.md               # 15-beat high-level outline
-│   │   ├── continuity.md                   # Cumulative state tracker
-│   │   ├── section_01_outline.md           # Section outline (chapters 1-3)
-│   │   ├── ...
-│   │   ├── section_23_outline.md           # Section outline (chapter 48)
-│   │   ├── section_map.md                  # Section-to-chapter lookup table
-│   │   └── orchestration_guide.md          # How the system works (detailed)
-│   └── prompts/
-│       ├── chapter_prompt.md               # Legacy manual writing process
-│       ├── resume_session.md               # Legacy session bootstrapper
-│       └── story_outline_prompt.md         # Legacy story development prompt
+├── docs/                                   # Project-level plans/designs
+│   └── restructure_plan.md
+├── books/                                  # All books live here
+│   ├── tasty/                              # Book 1 — literary dark fantasy (first draft complete)
+│   │   ├── CLAUDE.md                       # Story rules (voice, characters, world, prohibitions)
+│   │   ├── chapters/                       # Chapter prose only
+│   │   │   ├── ch01.md                     # Chapter 1: The Older Brother's Country
+│   │   │   └── ch48.md                     # Chapter 48 (final)
+│   │   ├── docs/
+│   │   │   ├── 15_beats.md                 # 15-beat high-level outline
+│   │   │   ├── legacy_story_analysis.md    # Original 23-section architecture (legacy)
+│   │   │   ├── continuity.md               # Cumulative state tracker
+│   │   │   ├── section_NN_outline.md       # Per-section outlines (×23)
+│   │   │   ├── section_map.md              # Section-to-chapter lookup
+│   │   │   └── orchestration_guide.md      # How the system works (detailed)
+│   │   ├── reviews/                        # Editor-pass output
+│   │   │   ├── weak-writing/               # /review weak-writing output
+│   │   │   └── consistency/                # /review consistency output
+│   │   └── prompts/                        # Legacy manual prompts (reference only)
+│   │       ├── chapter_prompt.md
+│   │       ├── resume_session.md
+│   │       └── story_outline_prompt.md
+│   └── nexter/                             # Book 2 — in development
+│       ├── CLAUDE.md                       # Story rules (placeholder)
+│       ├── chapters/                       # (empty)
+│       └── docs/                           # (empty — populated by the dev workflow)
 └── .claude/
     ├── settings.json                       # Permissions, hooks
     ├── rules/
-    │   └── story-development.md            # Auto-loads when editing structural files
+    │   ├── story-development.md            # Auto-loads when editing structural files
+    │   ├── weak-writing.md                 # Editor-pass rules (weak writing)
+    │   ├── poor-consistency.md             # Editor-pass rules (setting consistency)
+    │   └── writing-blunders.md             # Editor-pass rules (genre/timing/reveals)
     ├── skills/
     │   ├── write-section/SKILL.md          # /write-section — chapter orchestrator
     │   ├── resume/SKILL.md                 # /resume — session bootstrap
@@ -213,15 +223,16 @@ Validates consistency across all story-structural files. 10-point check: beat co
         └── structure-validator/AGENT.md    # Cross-file consistency check
 ```
 
+Every skill takes an optional `[book-name]` argument that resolves to a subdirectory of `books/`. When only one book exists, skills may default to it; with multiple books the caller must specify.
+
 ## Hooks (Automated Enforcement)
 
-Three hooks in `.claude/settings.json` enforce workflow discipline:
+Two hooks in `.claude/settings.json` enforce workflow discipline:
 
 | Hook | Trigger | What it does |
 |------|---------|-------------|
-| Continuity reminder | After writing a chapter file | Injects a reminder to update `book/docs/continuity.md` |
+| Continuity reminder | After writing a chapter file | Injects a reminder to update `books/[name]/docs/continuity.md` |
 | Beat stability gate | Before writing a section outline | Blocks authoritative sections if beats aren't Stable |
-| Stop verification | Before session ends | Checks continuity was updated, sections are complete, commits were made |
 
 ## Key Concepts
 
@@ -231,25 +242,25 @@ Three hooks in `.claude/settings.json` enforce workflow discipline:
 
 **Parallel execution:** Context loading spawns 3 agents simultaneously. Post-chapter processing spawns 2 agents simultaneously. Non-adjacent section generation runs in parallel.
 
-**Continuity as single source of truth:** `book/docs/continuity.md` tracks everything — timeline, character states, injuries, knowledge, objects, threads. Updated after every chapter by the `continuity-updater` agent.
+**Continuity as single source of truth:** `books/[name]/docs/continuity.md` tracks everything — timeline, character states, injuries, knowledge, objects, threads. Updated after every chapter by the `continuity-updater` agent.
 
-**Section map:** `book/docs/section_map.md` is a static lookup table mapping sections to chapter ranges. Eliminates runtime parsing of outline headers.
+**Section map:** `books/[name]/docs/section_map.md` is a static lookup table mapping sections to chapter ranges. Eliminates runtime parsing of outline headers.
 
 ## Two CLAUDE.md Files
 
-The project has two instruction files:
+The project has two layers of instructions:
 
-- **`CLAUDE.md`** (root) — workflow rules. Describes the CLI system: skills, agents, file conventions, development pipeline, continuity tracking. Shared across any novel in this repo.
-- **`book/CLAUDE.md`** — story rules. Voice, style, characters, world rules, prohibitions. Specific to Tasty. A second novel would get its own `book/CLAUDE.md`.
+- **`CLAUDE.md`** (root) — workflow rules. Describes the CLI system: skills, agents, file conventions, development pipeline, continuity tracking. Shared across every book in `books/`.
+- **`books/[name]/CLAUDE.md`** — story rules for one book. Voice, style, characters, world rules, prohibitions. Each book gets its own.
 
 Both load automatically when Claude Code runs in this directory.
 
 ## For a New Novel
 
-The system is generic. To start a new novel with the same workflow:
+The system is generic. To add another novel alongside the existing books:
 
-1. Create a `book/` directory (or rename the existing one and create a fresh one)
+1. Create a `books/[name]/` directory with `CLAUDE.md`, `chapters/`, and `docs/` subfolders
 2. The `.claude/` directory, root `CLAUDE.md`, and `README.md` stay as-is
-3. Write `book/CLAUDE.md` with the new story's voice rules, world rules, characters, prohibitions
-4. Start a discovery conversation — the rules file activates automatically when working with `book/docs/` files
-5. Follow the pipeline: `/generate-beats` → `/stabilize-beats` → `/expand-sections` → `/write-section`
+3. Write `books/[name]/CLAUDE.md` with the new story's voice rules, world rules, characters, prohibitions
+4. Start a discovery conversation — the rules file activates automatically when working with `books/[name]/docs/` files
+5. Follow the pipeline: `/generate-beats [name]` → `/stabilize-beats [name]` → `/expand-sections [name]` → `/write-section [name]`
