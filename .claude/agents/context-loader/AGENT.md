@@ -17,7 +17,7 @@ The invoking skill will pass the concrete book root (e.g., `books/tasty`) in the
 Read these three files from the book's root:
 
 1. `{book}/CLAUDE.md` — project identity, voice rules, style rules, world rules, character profiles, prohibitions
-2. `{book}/docs/01_story_analysis.md` — full narrative architecture (23 sections, thematic design)
+2. `{book}/docs/legacy_story_analysis.md` — full narrative architecture (legacy structural file from the original workflow; present in books like tasty, may not exist in newer books)
 3. `{book}/docs/continuity.md` — cumulative state tracker (timeline, character states, objects, threads)
 
 ## Output Format

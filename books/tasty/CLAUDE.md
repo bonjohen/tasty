@@ -5,7 +5,7 @@
 - **Title:** Tasty (working title)
 - **Genre:** Literary dark fantasy
 - **Logline:** A demon who consumed his dying brother to survive a winter discovers the brother's voice growing inside him — and then discovers the brother may have planned to consume him first.
-- **Source documents:** `docs/01_story_beats.md` (15 beats), `docs/01_story_analysis.md` (23 sections + character/theme notes)
+- **Source documents:** `docs/15_beats.md` (15 beats), `docs/legacy_story_analysis.md` (23 sections + character/theme notes)
 
 ## Voice & Style
 

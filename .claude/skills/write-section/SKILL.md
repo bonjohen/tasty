@@ -45,7 +45,7 @@ If the remaining `$ARGUMENTS` (after book extraction) provides a section number,
 Spawn THREE agents simultaneously (in a single message with three Agent tool calls):
 
 ### Agent 1: context-loader
-Prompt: "Load context for the novel project. Read {book}/CLAUDE.md, {book}/docs/01_story_analysis.md, and {book}/docs/continuity.md. Return the structured summary."
+Prompt: "Load context for the novel project. Read {book}/CLAUDE.md, {book}/docs/legacy_story_analysis.md (if present — legacy structural file from the original workflow), and {book}/docs/continuity.md. Return the structured summary."
 
 ### Agent 2: outline-reader
 Prompt: "Read section [N] outlines. Read {book}/docs/section_[NN]_outline.md, {book}/docs/section_[NN-1]_outline.md (if exists), and {book}/docs/section_[NN+1]_outline.md (if exists). Return the chapter specifications."

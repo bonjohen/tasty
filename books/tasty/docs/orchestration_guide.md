@@ -60,7 +60,7 @@ The loop depends on several reference documents, each serving a specific role:
 
 **`CLAUDE.md`** is the constitution. It defines the novel's voice (literary dark register, McCarthy/Morrison density), the world rules (pre-industrial, no firearms), the characters (who they are, what they want, how they speak), the Bleed mechanics (Hakiia's voice enters unmarked, no italics, no quotes), and the prohibitions (no redemption arcs, no triumphant violence, no genre cliches). Every creative decision in every chapter must be consistent with this file. It never changes during a writing session.
 
-**`docs/01_story_analysis.md`** is the architectural blueprint. It maps the entire novel — 23 sections, each with thematic purpose, emotional function, and narrative trajectory. It tells you why each part of the story exists and what it must accomplish. Claude reads it once at the start of each session to understand the shape of the whole book.
+**`docs/legacy_story_analysis.md`** is the architectural blueprint. It maps the entire novel — 23 sections, each with thematic purpose, emotional function, and narrative trajectory. It tells you why each part of the story exists and what it must accomplish. Claude reads it once at the start of each session to understand the shape of the whole book.
 
 **`docs/section_NN_outline.md`** files are the tactical instructions. Each one covers 2-3 chapters and specifies, for every chapter: the POV character, the word target, every narrative beat (in order), the chapter's emotional function, and any special notes about tone, Bleed stage, or things to avoid. These are the writing instructions. The outline says "Hakiia corrects Hurkuzak's grip on a weapon. The correction is technically right and delivered with casual contempt." Claude writes that scene.
 
@@ -74,7 +74,7 @@ A typical session writes one section (2-3 chapters). Here is what happens inside
 
 **Turn 1:** The human gives the instruction. Claude reads `resume_session.md` (about 80 lines) and `chapter_prompt.md` (about 200 lines). Both files now live in the context window.
 
-**Turn 2:** Claude reads the three core context files. `CLAUDE.md` is 90 lines. `01_story_analysis.md` is several hundred lines. `continuity.md` is over 200 lines and growing with every chapter. All of this goes into the context window.
+**Turn 2:** Claude reads the three core context files. `CLAUDE.md` is 90 lines. `legacy_story_analysis.md` is several hundred lines. `continuity.md` is over 200 lines and growing with every chapter. All of this goes into the context window.
 
 **Turn 3:** Claude lists the chapters directory, finds the highest chapter number, reads the section map (mentally — the section-to-chapter mapping is encoded in the outline headers), and reads the current section outline plus the two adjacent ones. More context consumed.
 
@@ -201,7 +201,7 @@ This is the key insight: **agents act as context compressors**. The `context-loa
 
 #### context-loader
 
-**Reads:** `CLAUDE.md`, `docs/01_story_analysis.md`, `docs/continuity.md`
+**Reads:** `CLAUDE.md`, `docs/legacy_story_analysis.md`, `docs/continuity.md`
 **Returns:** A structured summary with sections for voice rules, world rules, character states (physical, location, knowledge, emotional), timeline position, Bleed stage, and open narrative threads.
 **Model:** Sonnet (structured extraction, not creative work)
 **Tools:** Read, Grep
