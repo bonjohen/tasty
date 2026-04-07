@@ -7,13 +7,13 @@ You are writing chapters for the novel Tasty. Follow this process exactly.
 Read these files first:
 
 * CLAUDE.md
-* docs/01_story_analysis.md
+* docs/legacy_story_analysis.md
 * docs/continuity.md
 
 Purpose:
 
 * CLAUDE.md = voice, style, world rules, character profiles, prohibitions
-* docs/01_story_analysis.md = full narrative architecture and emotional design
+* docs/legacy_story_analysis.md = full narrative architecture and emotional design
 * docs/continuity.md = current timeline, character state, injuries, knowledge, open threads, key objects, key locations
 
 If any required file is missing, stop and report the missing file or files.
@@ -80,7 +80,7 @@ Follow, in descending priority:
 
 1. the current section outline beats and notes
 2. CLAUDE.md
-3. docs/01_story_analysis.md
+3. docs/legacy_story_analysis.md
 4. docs/continuity.md
 5. the immediately previous written chapter
 

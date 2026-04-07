@@ -19,7 +19,7 @@ A literary dark fantasy novel. 48 chapters across 23 sections. You are writing t
 Read these files in this order before drafting any chapter:
 
 1. `CLAUDE.md` — voice rules, style, world rules, characters, prohibitions
-2. `docs/01_story_analysis.md` — full narrative architecture (23 sections)
+2. `docs/legacy_story_analysis.md` — full narrative architecture (23 sections)
 3. `docs/continuity.md` — current state of all characters, timeline, threads, objects
 4. `prompts/chapter_prompt.md` — the exact process to follow for writing chapters
 5. The current section outline: `docs/section_NN_outline.md`
