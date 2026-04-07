@@ -18,10 +18,21 @@ Resolve which book to generate beats for; the resolved path replaces `{book}` fo
 ## Prerequisites
 
 Check that these files exist:
-- `{book}/docs/story_concept.md` — REQUIRED. If missing, tell the user: "No story concept file found. The beat backbone needs at least a premise, emotional core, and ending direction. Either create `{book}/docs/story_concept.md` or discuss the story concept first."
+- `{book}/docs/story_concept.md` — REQUIRED. If missing, tell the user: "No story concept file found. The beat backbone needs at least a premise, emotional core, and ending direction. Run `/develop-concept {book-name}` to produce one, or create `{book}/docs/story_concept.md` manually."
 - `{book}/docs/characters.md` — recommended but not required
 - `{book}/docs/world_rules.md` — recommended but not required
 - `{book}/docs/open_questions.md` — read if exists, to understand unresolved decisions
+
+### Concept Status Gate (soft)
+
+After confirming `{book}/docs/story_concept.md` exists, read its `**Status:**` header.
+
+- If **Exploratory**: warn the user. "story_concept.md is still Exploratory. Beats generated from an exploratory concept will themselves be exploratory and likely need significant rework. Recommend running `/develop-concept {book-name}` to push the concept toward Provisional or Stable first. Continue anyway?" If the user declines, stop. If the user proceeds, generate beats but mark them **Exploratory** in the status header regardless of other factors.
+- If **Provisional**: proceed normally. Beats will inherit Provisional status (per the existing rule that beats are never marked higher than Provisional during generation).
+- If **Stable** or **Locked**: proceed normally.
+- If no `**Status:**` header is present in the concept file: treat as Provisional and proceed. Do not warn — older concept files may predate the status convention.
+
+This is a soft gate, not a hard refusal. The user can always override with explicit confirmation.
 
 If `{book}/docs/15_beats.md` already exists, read it. This is a revision, not a fresh generation. Preserve what's working and revise what needs to change.
 

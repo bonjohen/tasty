@@ -17,8 +17,10 @@ Use `books/tasty/CLAUDE.md` as a structural reference for what a fully populated
 ## Development Status
 
 - Concept: not started
+- Characters: not started
+- World rules: not started
 - Beats: not started
 - Sections: not started
 - Chapters: not started
 
-Start development with `/generate-beats nexter` once `books/nexter/docs/story_concept.md` exists. Use `/story-status nexter` at any time to see the current state of the development pipeline.
+Start development with `/develop-concept nexter`. The skill walks you through a focused discovery conversation that produces `books/nexter/docs/story_concept.md` one round at a time. When the concept is at least Provisional, run `/develop-characters nexter` and `/develop-world nexter` to fill in the rest of the discovery file set. Once `story_concept.md` is at least Stable, run `/generate-beats nexter` to produce the beat backbone. Use `/story-status nexter` at any time to see the current state of the development pipeline.

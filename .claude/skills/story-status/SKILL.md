@@ -81,10 +81,14 @@ Resolve which book to report on; the resolved path replaces `{book}` for the res
 
 ### Recommended Next Action
 [One of:]
-- Continue discovery conversation
-- Run `/generate-beats`
-- Run `/stabilize-beats`
-- Run `/expand-sections`
-- Run `/check-structure` for validation
-- Run `/write-section` to begin drafting
+- Run `/develop-concept [book]` — if no `story_concept.md` exists, or if it is still Exploratory
+- Run `/develop-characters [book]` — if `story_concept.md` is at least Provisional but `characters.md` is missing or thin
+- Run `/develop-world [book]` — if the story relies on world rules that have not yet been captured
+- Run `/generate-beats [book]` — if the discovery files are at least Provisional and no beats exist yet
+- Run `/stabilize-beats [book]` — if beats exist but are still Provisional
+- Run `/expand-sections [book]` — if beats are Stable or Locked and sections are missing
+- Run `/check-structure [book]` — for cross-file validation
+- Run `/write-section [book]` — to begin or continue drafting
 ```
+
+When choosing the recommendation, walk the pipeline left-to-right and pick the first stage that is incomplete. The `/develop-*` skills are the leftmost stage — recommend them whenever the four discovery files are missing or still Exploratory.

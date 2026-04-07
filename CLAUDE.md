@@ -49,15 +49,25 @@ The original manual process for tasty is preserved in `books/tasty/prompts/chapt
 
 ## Story Development Workflow
 
-The pre-drafting development process uses a separate set of skills and agents:
+The pre-drafting development process uses a separate set of skills and agents. The pipeline runs left-to-right: discovery files → beats → sections → drafting.
 
-- **`/generate-beats [book-name]`** — Creates or revises the beat backbone (`books/[bookname]/docs/15_beats.md`) from the story concept
+**Discovery (the leftmost stage — entry point for a book with no development files yet):**
+
+- **`/develop-concept [book-name]`** — Drives a focused discovery conversation that produces or revises `books/[bookname]/docs/story_concept.md`. One question round per invocation. Run repeatedly to converge.
+- **`/develop-characters [book-name]`** — Same shape, targets `books/[bookname]/docs/characters.md`. Best run after the concept is at least Provisional.
+- **`/develop-world [book-name]`** — Same shape, targets `books/[bookname]/docs/world_rules.md`. Aggressively rejects decorative worldbuilding — only rules that materially affect causality.
+
+`open_questions.md` is maintained as a side effect by all three discovery skills — it has no dedicated entry point. Each skill writes only its target file plus open questions, and surfaces material that belongs in sibling files as recommendations rather than silent edits.
+
+**Beat and section stages:**
+
+- **`/generate-beats [book-name]`** — Creates or revises the beat backbone (`books/[bookname]/docs/15_beats.md`) from the discovery files. Has a soft gate that warns when `story_concept.md` is still Exploratory.
 - **`/stabilize-beats [book-name]`** — Runs the Beat Expansion decision pass; assesses whether beats are ready for section expansion
 - **`/expand-sections [book-name] [range]`** — Generates section outline files from stabilized beats; enforces the beat stability gate
 - **`/story-status [book-name]`** — Dashboard for the development phase (concept, beats, sections, characters, open questions)
 - **`/check-structure [book-name] [draft-ready]`** — Validates consistency across all structural files
 
-Development agents (in `.claude/agents/`): `beat-analyzer`, `section-generator`, `structure-validator`.
+Development agents (in `.claude/agents/`): `concept-interviewer`, `concept-writer`, `beat-analyzer`, `section-generator`, `structure-validator`.
 
 Behavioral rules for story development conversations load automatically via `.claude/rules/story-development.md` when working with structural files (the rule's `paths:` use `books/*/docs/...` globs so it activates across any book).
 
